@@ -4,17 +4,46 @@
 
 /* Example of CSS replacing the HTML style sheet we used in the previous demo version */
 
-body {background-color: LightGoldenRodYellow;
-      font-family: "Times New Roman", Times, serif}
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: LightGoldenRodYellow;
+  font-family: "Helvatica Neue", sans-serif;
+  height : 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("wellington.PNG");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
-h1   {color: black;
-      font-weight: bold;
-      font-size: 36px}
+h1  {
+  color: black;
+  font-weight: bold;
+  font-size: 36px;
+  font-family: sans-serif;
+  margin: auto;
+  text-align: center;
+  }
 
-h2   {color:blue;
-      font-weight: bold;
-      font-size: 30px}
+h2  {
+  color:blue;
+  font-weight: bold;
+  font-size: 30px
+  }
 
 
 
@@ -50,5 +79,3 @@ padding: 20px;
     /*color: #0000CC;*/
     /*padding: 8px 8px 8px 8px; */
 }
-
-
