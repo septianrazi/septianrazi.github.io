@@ -6,7 +6,9 @@
 
 html {
   height: 100%;
+  font-size: 100%;
   margin: 0;
+
 }
 
 body {
@@ -24,15 +26,33 @@ body {
 
 .bg {
   /* The image used */
-  background-image: url("wellington.PNG");
+  background-image: url("images/main-image.jpg");
 
   /* Full height */
-  height: 100%;
+  width: 100%;
+  height: 100vh;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hi {
+  color: white;
+  font-size: 3.5em;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+
+  text-align: left;
+  /* margin-bottom: 100px; */
+
+  /* vertical-align: middle; */
+  
+  /* margin-right: 150px;
+  margin-left: 80px;  */
 }
 
 
@@ -85,6 +105,8 @@ nav ul {
 }
 
 /* ---------------- */
+
+
 
 /* Menu division: format the menu generally including background colour and style */
 
