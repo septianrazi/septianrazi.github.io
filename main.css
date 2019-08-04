@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+main {
+  width: 60%;
+  margin: auto;
+}
+
 /* Rule for custom font */
 @font-face {
   font-family: Athiti;
@@ -59,7 +64,7 @@ body {
 h1  {
   color: black;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 3em;
   font-family: Athiti, sans-serif;
   margin: auto;
   text-align: center;
@@ -68,7 +73,7 @@ h1  {
 h2  {
   color:darkslategrey;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.3em;
   font-family: Athiti, sans-serif;
 
   }
@@ -94,7 +99,7 @@ nav li {
 }
 
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -107,6 +112,14 @@ nav ul {
 /* ---------------- */
 
 
+
+.role{
+  font-size: 1.6em;
+  font-family: Lato, sans-serif;
+  text-align: center;
+  display: inline;
+  margin-left: 10%;
+}
 
 /* Menu division: format the menu generally including background colour and style */
 
