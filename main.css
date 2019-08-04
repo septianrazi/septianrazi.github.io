@@ -111,45 +111,61 @@ nav ul {
 
 /* ---------------- */
 
+/* ------------ */
+/* BIO SECTION */
+/* ------------*/
 
+.roles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: no-wrap;
+}
 
-.role{
+.role { 
   font-size: 1.6em;
   font-family: Lato, sans-serif;
   text-align: center;
+  text-decoration: none;
+  display: inline;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+/* -------------------- */
+/* SOCIAL MEDIA SECTION */
+/* -------------------- */
+
+.contact ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: no-wrap;
+
+  /* text-align: center; */
+}
+
+.contact li {
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
   display: inline;
   margin-left: 10%;
+  margin-right: 10%;
+  
 }
 
-/* Menu division: format the menu generally including background colour and style */
-
-#menu {
-  width: 550px;
-  height: 35px;
-  font-size: 15px;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  background-color: #66CC33;
-  border-radius: 6px;
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
-/* Menu division: format the unordered list so that it appears directly below the title of the page and below the edge of the colour background */
-#menu ul {
-  height: auto;
-  padding: 8px 0px;
-  /*margin: 0px;*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Menu division: format the list items so that they display across the page instead of in a vertical list */
-#menu li {
-display: inline;
-padding: 20px;
-}
-
-/* Menu division: format the link items so that they are dark blue, spaced apart, and do not have underlines */
-#menu a {
-    text-decoration: none;
-    /*color: #0000CC;*/
-    /*padding: 8px 8px 8px 8px; */
-}
+/* ------------------------- */
