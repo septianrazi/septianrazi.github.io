@@ -87,6 +87,15 @@ nav {
   font: bold;
   overflow: hidden;
   float: right;
+  padding-top: 15px;
+}
+
+#logo {
+  float:left;
+  height: 9%;
+  padding-left: 10px;
+  padding-top: 15px;
+  box-sizing: border-box;
 }
 
 nav li {
