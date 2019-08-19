@@ -31,7 +31,7 @@ main {
 
 .bg {
   /* The image used */
-  background-image: url("images/main-image.jpg");
+  background-image: url("images/main-image2.jpg");
 
   /* Full height */
   width: 100%;
@@ -187,7 +187,7 @@ nav ul {
 
 #CV {
   position: relative;
-  left: 50%;
+  left: 88%;
   top: 50%;
   transform: translate(-50%, -50%);
   margin-top: 20px;
@@ -241,9 +241,20 @@ nav ul {
 
 
 /* ----------- */
-/* BIO SECTION */
+/* SKILLS SECTION */
 /* ----------- */
 
+.skills ul {
+  columns: 3;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+  margin-top: 5%;
+}
+
+.skills ul li {
+  padding-top: 5px;
+}
 
 
 /* ----------- */
