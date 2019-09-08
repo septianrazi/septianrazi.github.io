@@ -1,7 +1,20 @@
-<!DOCTYPE html>
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
 
-<html lang="en-GB">
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en-GB"> 
 
 <head>
   <meta charset="utf-8">
@@ -16,7 +29,7 @@
   <script src="p5.js"></script>
   <!-- <script src="p5.dom.js"></script>
   <script src="p5.sound.js"></script> -->
-  <script src="sketch.js"></script>
+  <!-- <script src="sketch.js"></script> 
 </head>
 
 
@@ -33,7 +46,8 @@
 
 
 <!-- Close body of webpage -->
-</body>
+<!-- </body> -->
 
 <!-- Close html-->
-</html>
+<!-- </html> -->
+
