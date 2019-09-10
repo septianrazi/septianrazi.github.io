@@ -31,12 +31,12 @@ main {
 /* Rule for custom font */
 @font-face {
   font-family: Athiti;
-  src: url(fonts/Athiti/Athiti-Regular.ttf)
+  src: url("../fonts/Athiti/Athiti-Regular.ttf")
 }
 
 .bg {
   /* The image used */
-  background-image: url("images/main-image2.jpg");
+  background-image: url("../images/main-image2.jpg");
 
   /* Full height */
   width: 100%;

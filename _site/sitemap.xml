@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/authors/jill.html</loc>
-<lastmod>2019-09-08T20:42:54+10:00</lastmod>
+<lastmod>2019-09-10T15:33:32+10:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/authors/ted.html</loc>
-<lastmod>2019-09-08T20:42:54+10:00</lastmod>
+<lastmod>2019-09-10T15:33:32+10:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2018/08/20/bananans.html</loc>
@@ -38,6 +38,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/work.html</loc>
-<lastmod>2019-09-06T15:23:36+10:00</lastmod>
+<lastmod>2019-09-10T15:25:28+10:00</lastmod>
 </url>
 </urlset>
