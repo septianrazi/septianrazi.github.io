@@ -190,7 +190,6 @@ nav ul {
   height: 10%;
   -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
   transition: 0.3s;
-  margin: 0 auto;
 }
 
 .button:hover{
@@ -200,10 +199,9 @@ nav ul {
 
 #CV {
   position: relative;
-  left: 88%;
-  top: 50%;
+  left: 86%;
   transform: translate(-50%, -50%);
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: Athiti, sans-serif;
 }
 
@@ -279,6 +277,10 @@ nav ul {
   width: 200%;
 }
 
+.socialMediaLinks #email img {
+  width: 210%;
+}
+
 /* ------------------------- */
 
 
@@ -286,11 +288,45 @@ nav ul {
 /* FOOTER SECTION */
 /* -------------- */
 
-footer {
+footer { 
   background-color: darkslategray;
   height: 20%;
   margin-top: 5%;
+  width: 100%;
 }
 
+.footerContent { 
+  padding-top: 2%;
+  width: 60%;
+  margin: auto;
+  color: white;
+}
 
+.footerContent a { 
+  color: white;
+}
+
+.footerContent .ccLicense img {
+  margin-top: 10px;
+  max-width: 10%;
+  height:auto;
+}
+
+.footerContent .githubLink img {
+  margin-top: 10px;
+  width: 2.5%;
+  height:auto;
+}
+
+.footerContent .jekyllLink img {
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 2.5%;
+  height:auto;
+  filter: grayscale(100%)
+}
+
+.footerContent .attributionLinks {
+  padding-left: 0.4%;
+}
 /* ----------- */

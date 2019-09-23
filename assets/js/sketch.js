@@ -42,7 +42,7 @@ var lastPressed;
 
 function preload() {
 
-  var image1 = loadImage("images/under_construction_logo_dark.png");
+  var image1 = loadImage("assets/images/under_construction_logo_dark.png");
 
   imageList = [image1];
 }
