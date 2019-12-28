@@ -1,4 +1,4 @@
-
+/* 
 /* This is my style sheet */
 
 
@@ -16,9 +16,21 @@ html {
   padding: 0;    
 }
 
+/* Rule for custom font */
+@font-face {
+  font-family: Athiti;
+  src: url("../fonts/Athiti/Athiti-Regular.ttf")
+}
+
+/* Rule for custom font */
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway/Raleway-Medium.ttf")
+}
+
 body {
   background-color: white;
-  font-family: "Helvatica Neue", sans-serif;
+  font-family: "Raleway", sans-serif;
   height : 100%;
   margin: 0;
 }
@@ -28,11 +40,6 @@ main {
   margin: auto;
 }
 
-/* Rule for custom font */
-@font-face {
-  font-family: Athiti;
-  src: url("../fonts/Athiti/Athiti-Regular.ttf")
-}
 
 .bg {
   /* The image used */
@@ -86,6 +93,10 @@ h2  {
   margin-top: 2%;
 
   }
+
+p, li {
+  font-size: 1.2em;
+}
 
 /* ------------------- */
 /* NAVIGATION BAR CSS */
@@ -222,7 +233,6 @@ nav ul {
 
 .skills ul li {
   padding-top: 5px;
-  font-size:  1.0em;
   overflow: hidden;
   white-space: nowrap;
   break-inside: avoid-column;
@@ -296,7 +306,7 @@ footer {
 }
 
 .footerContent { 
-  padding-top: 2%;
+  padding-top: 1%;
   width: 60%;
   margin: auto;
   color: white;
@@ -329,4 +339,4 @@ footer {
 .footerContent .attributionLinks {
   padding-left: 0.4%;
 }
-/* ----------- */
+----------- */

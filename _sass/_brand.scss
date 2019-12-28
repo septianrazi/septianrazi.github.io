@@ -1,0 +1,22 @@
+// CSS rules pertinent to the brand imagery of the website
+// useful for keeping consistency
+
+$title-text: Athiti, sans-serif;
+$body-text: Raleway, sans-serif;
+
+$color1 : white;
+$color2 : darkslategray;
+$color3 : black;
+
+
+/* Rule for custom font */
+@font-face {
+    font-family: Athiti;
+    src: url("../fonts/Athiti/Athiti-Regular.ttf")
+  }
+  
+/* Rule for custom font */
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway/Raleway-Medium.ttf")
+ }
