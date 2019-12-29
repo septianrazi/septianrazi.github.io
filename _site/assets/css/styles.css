@@ -26,11 +26,15 @@ body h2 { color: darkslategray; font-weight: bold; font-size: 2.3em; font-family
 
 body p, body li { font-size: 1.2em; }
 
-.bg { grid-column: left-ws / right-end; grid-row: header-img / content-row; background-color: red; z-index: -1; }
+.bg { grid-column: left-ws / right-end; grid-row: header-img / content-row; z-index: -1; }
+
+.bg #sketch-holder { position: absolute; }
+
+.bg .centerpiece { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; }
+
+.bg #logo { width: 40%; }
 
 nav { grid-area: nav; font-family: Athiti, sans-serif; font: bold; overflow: hidden; box-sizing: border-box; }
-
-nav #logo { float: left; height: 9%; padding-left: 10px; padding-top: 15px; box-sizing: border-box; }
 
 nav ul { list-style-type: none; margin: 0; padding: 0; text-align: center; }
 

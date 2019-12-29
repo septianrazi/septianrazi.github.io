@@ -47,8 +47,23 @@ body {
 .bg {
   grid-column: left-ws / right-end;
   grid-row: header-img / content-row;
-  background-color: red;
   z-index: -1;
+
+  #sketch-holder {
+    position: absolute;
+  }
+
+  .centerpiece {
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #logo {
+    width: 40%;
+  }
 }
 
 // /* ------------------- */
@@ -62,14 +77,6 @@ nav {
   font: bold;
   overflow: hidden;
   box-sizing: border-box;
-
-  #logo {
-    float:left;
-    height: 9%;
-    padding-left: 10px;
-    padding-top: 15px;
-    box-sizing: border-box;
-  }
     
   ul {
     list-style-type: none;
