@@ -20,12 +20,74 @@ html { height: 100%; font-size: 100%; margin: 0; }
 
 body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; }
 
+body h1 { color: black; font-weight: bold; font-size: 3em; font-family: Athiti, sans-serif; margin: auto; text-align: center; margin-bottom: 5%; margin-top: 5%; }
+
+body h2 { color: darkslategray; font-weight: bold; font-size: 2.3em; font-family: Athiti, sans-serif; margin-bottom: 2%; margin-top: 2%; }
+
+body p, body li { font-size: 1.2em; }
+
 .bg { grid-column: left-ws / right-end; grid-row: header-img / content-row; background-color: red; z-index: -1; }
 
-nav { grid-area: nav; background-color: green; }
+nav { grid-area: nav; font-family: Athiti, sans-serif; font: bold; overflow: hidden; box-sizing: border-box; }
 
-main { grid-area: content; background-color: blue; }
+nav #logo { float: left; height: 9%; padding-left: 10px; padding-top: 15px; box-sizing: border-box; }
 
-footer { grid-area: footer-content; background-color: plum; }
+nav ul { list-style-type: none; margin: 0; padding: 0; text-align: center; }
+
+nav li { text-align: center; display: inline; padding: 14px 16px; text-decoration: none; font-size: 23px; }
+
+nav a { color: darkslategray; text-decoration: none; }
+
+main { grid-area: content; }
+
+main .roles { display: flex; flex-direction: row; justify-content: center; flex-wrap: no-wrap; }
+
+main .role { font-size: 1.5em; font-family: Lato, sans-serif; text-align: center; text-decoration: none; margin-left: 5%; margin-right: 5%; background-color: darkslategray; border: none; color: white; padding: 15px 32px; display: inline-block; border-radius: 4px; height: 20%; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
+
+main .role:hover { background-color: #395e5e; box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+main .bioDescription { margin-top: 2%; }
+
+main .button a { text-decoration: none; color: white; }
+
+main .button { text-align: center; font-size: 1em; font-family: Lato, sans-serif; text-align: center; text-decoration: none; background-color: black; border: none; color: white; padding: 10px 20px; display: inline-block; border-radius: 100px; height: 10%; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
+
+main .button:hover { background-color: #232525; box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
+main #CV { position: relative; left: 86%; transform: translate(-50%, -50%); margin-top: 40px; font-family: Athiti, sans-serif; }
+
+main .skills ul { columns: 3; text-align: center; list-style: none; overflow: hidden; white-space: nowrap; margin-bottom: 7%; }
+
+main .skills ul li { padding-top: 5px; overflow: hidden; white-space: nowrap; break-inside: avoid-column; }
+
+main .rating { font-family: sans-serif; font-size: 2em; color: darkslategray; }
+
+main .contact ul { list-style-type: none; display: flex; flex-direction: row; justify-content: center; flex-wrap: no-wrap; /* text-align: center; */ }
+
+main .contact li { text-align: center; /* padding: 14px 16px; */ text-decoration: none; display: inline; margin-left: 10%; margin-right: 10%; }
+
+main nav a { color: white; text-decoration: none; }
+
+main nav ul { list-style-type: none; margin: 0; padding: 0; }
+
+main .socialMediaLinks img { width: 200%; }
+
+main .socialMediaLinks #email img { width: 210%; }
+
+footer { grid-area: footer-content; }
+
+footer footer { background-color: darkslategray; height: 20%; margin-top: 5%; width: 100%; }
+
+footer .footerContent { padding-top: 1%; width: 60%; margin: auto; color: white; }
+
+footer .footerContent a { color: white; }
+
+footer .footerContent .ccLicense img { margin-top: 10px; max-width: 10%; height: auto; }
+
+footer .footerContent .githubLink img { margin-top: 10px; width: 2.5%; height: auto; }
+
+footer .footerContent .jekyllLink img { margin-top: 10px; margin-left: 5px; width: 2.5%; height: auto; filter: grayscale(100%); }
+
+footer .footerContent .attributionLinks { padding-left: 0.4%; }
 
 /*# sourceMappingURL=styles.css.map */

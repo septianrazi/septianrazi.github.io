@@ -6,6 +6,8 @@ body {
   font-family: "Raleway", sans-serif;
   height : 100%;
   margin: 0;
+
+  // Grid settings
   display: grid;
   grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end];
   grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end];
@@ -14,6 +16,32 @@ body {
     ". nav ."
     ". content ."
     ". footer-content .";
+
+    //font defaults
+    h1  {
+      color: $color3;
+      font-weight: bold;
+      font-size: 3em;
+      font-family: Athiti, sans-serif;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 5%;
+      margin-top: 5%;
+      }
+    
+    h2  {
+      color: $color1;
+      font-weight: bold;
+      font-size: 2.3em;
+      font-family: Athiti, sans-serif;
+      margin-bottom: 2%;
+      margin-top: 2%;
+    
+      }
+    
+    p, li {
+      font-size: 1.2em;
+    }
 }
 
 .bg {
@@ -23,15 +51,194 @@ body {
   z-index: -1;
 }
 
+// /* ------------------- */
+// /* NAVIGATION BAR CSS */
+// /* ------------------- */
+
 nav {
   grid-area: nav;
-  background-color: green;
+
+  font-family: Athiti, sans-serif;
+  font: bold;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  #logo {
+    float:left;
+    height: 9%;
+    padding-left: 10px;
+    padding-top: 15px;
+    box-sizing: border-box;
+  }
+    
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+    display: inline;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 23px;
+  }
+    
+  a {
+    color:  $color1;
+    text-decoration: none;
+  }
 }
 
 main {
   grid-area: content;
-  background-color: blue;
 
+  // /* ------------ */
+  // /* BIO SECTION */
+  // /* ------------*/
+
+  .roles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: no-wrap;
+  }
+
+  .role { 
+    font-size: 1.5em;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color:  $color1; 
+    border: none;
+    color:  $color2;
+    padding: 15px 32px;
+    display: inline-block;
+    border-radius: 4px;
+    height: 20%;
+    -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: 0.3s;
+  }
+
+  .role:hover{
+    background-color: #395e5e;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .bioDescription {
+    margin-top: 2%;
+  }
+
+  .button a {
+    text-decoration: none;
+    color:  $color2;
+  }
+
+  .button {
+    text-align: center;
+    font-size: 1em;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: $color3; 
+    border: none;
+    color:  $color2;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    height: 10%;
+    -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: 0.3s;
+  }
+
+  .button:hover{
+    background-color: #232525;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  #CV {
+    position: relative;
+    left: 86%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+    font-family: Athiti, sans-serif;
+  }
+
+  // /* ----------- */
+  // /* SKILLS SECTION */
+  // /* ----------- */
+
+  .skills ul {
+    columns: 3;
+    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 7%;
+  }
+
+  .skills ul li {
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    break-inside: avoid-column;
+  }
+
+  .rating {
+    font-family: sans-serif;
+    font-size: 2em;
+    color:  $color1;
+  }
+
+  // /* ----------- */
+
+  // /* -------------------- */
+  // /* SOCIAL MEDIA SECTION */
+  // /* -------------------- */
+
+  .contact ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: no-wrap;
+
+    /* text-align: center; */
+  }
+
+  .contact li {
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    display: inline;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  nav a {
+    color:  $color2;
+    text-decoration: none;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .socialMediaLinks img {
+    width: 200%;
+  }
+
+  .socialMediaLinks #email img {
+    width: 210%;
+  }
+
+  // /* ------------------------- */                
 }
 
 // footer {
@@ -44,27 +251,54 @@ main {
 
 footer {
   grid-area: footer-content;
-  background-color: plum;
+
+  // /* -------------- */
+  // /* FOOTER SECTION */
+  // /* -------------- */
+
+  footer { 
+    background-color:  $color1;
+    height: 20%;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .footerContent { 
+    padding-top: 1%;
+    width: 60%;
+    margin: auto;
+    color:  $color2;
+  }
+
+  .footerContent a { 
+    color:  $color2;
+  }
+
+  .footerContent .ccLicense img {
+    margin-top: 10px;
+    max-width: 10%;
+    height:auto;
+  }
+
+  .footerContent .githubLink img {
+    margin-top: 10px;
+    width: 2.5%;
+    height:auto;
+  }
+
+  .footerContent .jekyllLink img {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 2.5%;
+    height:auto;
+    filter: grayscale(100%)
+  }
+
+  .footerContent .attributionLinks {
+    padding-left: 0.4%;
+  }
+  // /* ----------- */
 }
-// }
-// main {
-//   width: 60%;
-//   margin: auto;
-// }
-
-// .bg {
-//   /* The image used */
-//   // background-image: url("../images/main-image2.jpg");
-
-//   /* Full height */
-//   width: 100%;
-//   height: 100vh;
-
-//   /* Center and scale the image nicely */
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
 
 // .hi {
 //   color:  $color2;
@@ -82,272 +316,3 @@ footer {
 //   /* margin-right: 150px;
 //   margin-left: 80px;  */
 // }
-
-
-// h1  {
-//   color: $color3;
-//   font-weight: bold;
-//   font-size: 3em;
-//   font-family: Athiti, sans-serif;
-//   margin: auto;
-//   text-align: center;
-//   margin-bottom: 5%;
-//   margin-top: 5%;
-//   }
-
-// h2  {
-//   color: $color1;
-//   font-weight: bold;
-//   font-size: 2.3em;
-//   font-family: Athiti, sans-serif;
-//   margin-bottom: 2%;
-//   margin-top: 2%;
-
-//   }
-
-// p, li {
-//   font-size: 1.2em;
-// }
-
-// /* ------------------- */
-// /* NAVIGATION BAR CSS */
-// /* ------------------- */
-
-// nav {
-//   font-family: Athiti, sans-serif;
-//   font: bold;
-//   overflow: hidden;
-//   float: right;
-//   padding-top: 15px;
-//   height:9%;
-//   box-sizing: border-box;
-
-// }
-
-// #logo {
-//   float:left;
-//   height: 9%;
-//   padding-left: 10px;
-//   padding-top: 15px;
-//   box-sizing: border-box;
-// }
-
-// nav li {
-
-//   text-align: center;
-//   padding: 14px 16px;
-//   text-decoration: none;
-//   font-size: 23px;
-//   float: right;
-// }
-
-// nav a {
-//   color:  $color2;
-//   text-decoration: none;
-// }
-
-// nav ul {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// /* ---------------- */
-
-// /* ------------ */
-// /* BIO SECTION */
-// /* ------------*/
-
-// .roles {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   flex-wrap: no-wrap;
-// }
-
-// .role { 
-//   font-size: 1.5em;
-//   font-family: Lato, sans-serif;
-//   text-align: center;
-//   text-decoration: none;
-//   margin-left: 5%;
-//   margin-right: 5%;
-//   background-color:  $color1; 
-//   border: none;
-//   color:  $color2;
-//   padding: 15px 32px;
-//   display: inline-block;
-//   border-radius: 4px;
-//   height: 20%;
-//   -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
-//   transition: 0.3s;
-// }
-
-// .role:hover{
-//   background-color: #395e5e;
-//   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-// }
-
-// .bioDescription {
-//   margin-top: 2%;
-// }
-
-// .button a {
-//   text-decoration: none;
-//   color:  $color2;
-// }
-
-// .button {
-//   text-align: center;
-//   font-size: 1em;
-//   font-family: Lato, sans-serif;
-//   text-align: center;
-//   text-decoration: none;
-//   background-color: $color3; 
-//   border: none;
-//   color:  $color2;
-//   padding: 10px 20px;
-//   display: inline-block;
-//   border-radius: 100px;
-//   height: 10%;
-//   -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
-//   transition: 0.3s;
-// }
-
-// .button:hover{
-//   background-color: #232525;
-//   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-// }
-
-// #CV {
-//   position: relative;
-//   left: 86%;
-//   transform: translate(-50%, -50%);
-//   margin-top: 40px;
-//   font-family: Athiti, sans-serif;
-// }
-
-
-
-// /* ----------- */
-// /* SKILLS SECTION */
-// /* ----------- */
-
-// .skills ul {
-//   columns: 3;
-//   text-align: center;
-//   list-style: none;
-//   overflow: hidden;
-//   white-space: nowrap;
-//   margin-bottom: 7%;
-// }
-
-// .skills ul li {
-//   padding-top: 5px;
-//   overflow: hidden;
-//   white-space: nowrap;
-//   break-inside: avoid-column;
-// }
-
-// .rating {
-//   font-family: sans-serif;
-//   font-size: 2em;
-//   color:  $color1;
-// }
-
-
-// /* ----------- */
-
-// /* -------------------- */
-// /* SOCIAL MEDIA SECTION */
-// /* -------------------- */
-
-// .contact ul{
-//   list-style-type: none;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   flex-wrap: no-wrap;
-
-//   /* text-align: center; */
-// }
-
-// .contact li {
-//   text-align: center;
-//   /* padding: 14px 16px; */
-//   text-decoration: none;
-//   display: inline;
-//   margin-left: 10%;
-//   margin-right: 10%;
-
-
-// }
-
-// nav a {
-//   color:  $color2;
-//   text-decoration: none;
-// }
-
-// nav ul {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .socialMediaLinks img {
-//   width: 200%;
-// }
-
-// .socialMediaLinks #email img {
-//   width: 210%;
-// }
-
-// /* ------------------------- */
-
-
-// /* -------------- */
-// /* FOOTER SECTION */
-// /* -------------- */
-
-// footer { 
-//   background-color:  $color1;
-//   height: 20%;
-//   margin-top: 5%;
-//   width: 100%;
-// }
-
-// .footerContent { 
-//   padding-top: 1%;
-//   width: 60%;
-//   margin: auto;
-//   color:  $color2;
-// }
-
-// .footerContent a { 
-//   color:  $color2;
-// }
-
-// .footerContent .ccLicense img {
-//   margin-top: 10px;
-//   max-width: 10%;
-//   height:auto;
-// }
-
-// .footerContent .githubLink img {
-//   margin-top: 10px;
-//   width: 2.5%;
-//   height:auto;
-// }
-
-// .footerContent .jekyllLink img {
-//   margin-top: 10px;
-//   margin-left: 5px;
-//   width: 2.5%;
-//   height:auto;
-//   filter: grayscale(100%)
-// }
-
-// .footerContent .attributionLinks {
-//   padding-left: 0.4%;
-// }
-// /* ----------- */
