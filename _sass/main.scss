@@ -17,16 +17,14 @@ body {
     ". content ."
     ". footer-content .";
 
+  row-gap: 2vh;
+
     //font defaults
     h1  {
       color: $color3;
       font-weight: bold;
       font-size: 3em;
       font-family: Athiti, sans-serif;
-      margin: auto;
-      text-align: center;
-      margin-bottom: 5%;
-      margin-top: 5%;
       }
     
     h2  {
@@ -59,10 +57,19 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
 
-  #logo {
-    width: 40%;
+    #logo {
+      width: 40%;
+    }
+  
+    h1 {
+      margin-bottom: 15px;
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 2vw;
+    }
   }
 }
 
@@ -101,6 +108,32 @@ nav {
 
 main {
   grid-area: content;
+
+  margin-top: 6vh;
+
+  .intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-basis: 50%;
+
+    h1 {
+      font-size: 4vw;
+      // float: left;
+    }
+
+    img {
+      width: 20vw;
+      border-radius: 50% / 50%;
+    }
+  }
+
+  // section {
+  //   margin-top: 3vh;
+  // }
 
   // /* ------------ */
   // /* BIO SECTION */
@@ -263,12 +296,8 @@ footer {
   // /* FOOTER SECTION */
   // /* -------------- */
 
-  footer { 
-    background-color:  $color1;
-    height: 20%;
-    margin-top: 5%;
-    width: 100%;
-  }
+   
+  background-color:  $color1;
 
   .footerContent { 
     padding-top: 1%;

@@ -18,9 +18,9 @@ html { height: 100%; font-size: 100%; margin: 0; }
 /* Rule for custom font */
 @font-face { font-family: Raleway; src: url("../fonts/Raleway/Raleway-Medium.ttf"); }
 
-body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; }
+body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; row-gap: 2vh; }
 
-body h1 { color: black; font-weight: bold; font-size: 3em; font-family: Athiti, sans-serif; margin: auto; text-align: center; margin-bottom: 5%; margin-top: 5%; }
+body h1 { color: black; font-weight: bold; font-size: 3em; font-family: Athiti, sans-serif; }
 
 body h2 { color: darkslategray; font-weight: bold; font-size: 2.3em; font-family: Athiti, sans-serif; margin-bottom: 2%; margin-top: 2%; }
 
@@ -32,7 +32,11 @@ body p, body li { font-size: 1.2em; }
 
 .bg .centerpiece { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; }
 
-.bg #logo { width: 40%; }
+.bg .centerpiece #logo { width: 40%; }
+
+.bg .centerpiece h1 { margin-bottom: 15px; font-size: 5vw; }
+
+.bg .centerpiece p { font-size: 2vw; }
 
 nav { grid-area: nav; font-family: Athiti, sans-serif; font: bold; overflow: hidden; box-sizing: border-box; }
 
@@ -42,7 +46,13 @@ nav li { text-align: center; display: inline; padding: 14px 16px; text-decoratio
 
 nav a { color: darkslategray; text-decoration: none; }
 
-main { grid-area: content; }
+main { grid-area: content; margin-top: 6vh; }
+
+main .intro { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; align-content: center; flex-basis: 50%; }
+
+main .intro h1 { font-size: 4vw; }
+
+main .intro img { width: 20vw; border-radius: 50% / 50%; }
 
 main .roles { display: flex; flex-direction: row; justify-content: center; flex-wrap: no-wrap; }
 
@@ -78,9 +88,7 @@ main .socialMediaLinks img { width: 200%; }
 
 main .socialMediaLinks #email img { width: 210%; }
 
-footer { grid-area: footer-content; }
-
-footer footer { background-color: darkslategray; height: 20%; margin-top: 5%; width: 100%; }
+footer { grid-area: footer-content; background-color: darkslategray; }
 
 footer .footerContent { padding-top: 1%; width: 60%; margin: auto; color: white; }
 
