@@ -10,7 +10,7 @@ body {
   // Grid settings
   display: grid;
   grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end];
-  grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end];
+  grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end];
   grid-template-areas: 
     "bg bg bg"
     ". nav ."
@@ -256,7 +256,7 @@ main {
   section.skill{
     grid-area: 4;
 
-    .skills ul {
+    ul {
       columns: 3;
       text-align: center;
       list-style: none;
@@ -265,7 +265,7 @@ main {
       margin-bottom: 7%;
     }
   
-    .skills ul li {
+    ul li {
       padding-top: 5px;
       overflow: hidden;
       white-space: nowrap;
@@ -285,17 +285,25 @@ main {
   section.contact{
     grid-area: 5;
 
-    .contact ul{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+      "heading heading heading heading"
+      "link1 link2 link3 link4 ";
+
+    h2 {
+      grid-area: heading;
+    }
+
+    ul{
       list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: no-wrap;
+      display: contents;
   
       /* text-align: center; */
     }
   
-    .contact li {
+    li {
       text-align: center;
       /* padding: 14px 16px; */
       text-decoration: none;
@@ -304,67 +312,59 @@ main {
       margin-right: 10%;
     }
   
-    nav a {
-      color:  $color2;
-      text-decoration: none;
-    }
-  
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-  
     .socialMediaLinks img {
-      width: 200%;
-    }
-  
-    .socialMediaLinks #email img {
-      width: 210%;
+      width: 50%;
     }
   }            
 }
 
 footer {
-  grid-area: footer-content;   
-  background-color:  $color1;
+  display: contents; // rule used to be able to use child element in overall grid layout
 
   // /* -------------- */
   // /* FOOTER SECTION */
   // /* -------------- */
   .footerContent { 
-    padding-top: 1%;
-    width: 60%;
-    margin: auto;
+    grid-area: footer-content;
+
+    background-color:  $color1;
     color:  $color2;
-  }
+    
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 
-  .footerContent a { 
-    color:  $color2;
-  }
+    a { 
+      color:  $color2;
+    }
 
-  .footerContent .ccLicense img {
-    margin-top: 10px;
-    max-width: 10%;
-    height:auto;
-  }
+    .ccLicense img {
+      margin-top: 10px;
+      max-width: 10%;
+      height:auto;
+    }
 
-  .footerContent .githubLink img {
-    margin-top: 10px;
-    width: 2.5%;
-    height:auto;
-  }
+   .githubLink img {
+      margin-top: 10px;
+      width: 2.5%;
+      height:auto;
+    }
 
-  .footerContent .jekyllLink img {
-    margin-top: 10px;
-    margin-left: 5px;
-    width: 2.5%;
-    height:auto;
-    filter: grayscale(100%)
+    .jekyllLink img {
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 2.5%;
+      height:auto;
+      filter: grayscale(100%)
+    }
+  
+    .attributionLinks {
+      padding-left: 0.4%;
+    }
   }
+}
 
-  .footerContent .attributionLinks {
-    padding-left: 0.4%;
-  }
-  // /* ----------- */
+.footerColor {
+  grid-column: 1 / 4;
+  grid-row: 4 / 4;   
+  background-color:  $color1;
 }

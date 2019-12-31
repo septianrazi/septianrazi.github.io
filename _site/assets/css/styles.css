@@ -18,7 +18,7 @@ html { height: 100%; font-size: 100%; margin: 0; }
 /* Rule for custom font */
 @font-face { font-family: Raleway; src: url("../fonts/Raleway/Raleway-Medium.ttf"); }
 
-body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] 10% [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; row-gap: 2vh; }
+body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; row-gap: 2vh; }
 
 body h1 { color: black; font-weight: bold; font-size: 3em; font-family: Athiti, sans-serif; }
 
@@ -80,29 +80,25 @@ main section.experience { grid-area: 3; }
 
 main section.skill { grid-area: 4; }
 
-main section.skill .skills ul { columns: 3; text-align: center; list-style: none; overflow: hidden; white-space: nowrap; margin-bottom: 7%; }
+main section.skill ul { columns: 3; text-align: center; list-style: none; overflow: hidden; white-space: nowrap; margin-bottom: 7%; }
 
-main section.skill .skills ul li { padding-top: 5px; overflow: hidden; white-space: nowrap; break-inside: avoid-column; }
+main section.skill ul li { padding-top: 5px; overflow: hidden; white-space: nowrap; break-inside: avoid-column; }
 
 main section.skill .rating { font-family: sans-serif; font-size: 2em; color: darkslategray; }
 
-main section.contact { grid-area: 5; }
+main section.contact { grid-area: 5; display: grid; grid-template-columns: repeat(4, auto); grid-template-columns: repeat(2, auto); grid-template-areas: "heading heading heading heading" "link1 link2 link3 link4 "; }
 
-main section.contact .contact ul { list-style-type: none; display: flex; flex-direction: row; justify-content: center; flex-wrap: no-wrap; /* text-align: center; */ }
+main section.contact h2 { grid-area: heading; }
 
-main section.contact .contact li { text-align: center; /* padding: 14px 16px; */ text-decoration: none; display: inline; margin-left: 10%; margin-right: 10%; }
+main section.contact ul { list-style-type: none; display: contents; /* text-align: center; */ }
 
-main section.contact nav a { color: white; text-decoration: none; }
+main section.contact li { text-align: center; /* padding: 14px 16px; */ text-decoration: none; display: inline; margin-left: 10%; margin-right: 10%; }
 
-main section.contact nav ul { list-style-type: none; margin: 0; padding: 0; }
+main section.contact .socialMediaLinks img { width: 50%; }
 
-main section.contact .socialMediaLinks img { width: 200%; }
+footer { display: contents; }
 
-main section.contact .socialMediaLinks #email img { width: 210%; }
-
-footer { grid-area: footer-content; background-color: darkslategray; }
-
-footer .footerContent { padding-top: 1%; width: 60%; margin: auto; color: white; }
+footer .footerContent { grid-area: footer-content; background-color: darkslategray; color: white; margin-bottom: 3vh; margin-top: 3vh; }
 
 footer .footerContent a { color: white; }
 
@@ -113,5 +109,7 @@ footer .footerContent .githubLink img { margin-top: 10px; width: 2.5%; height: a
 footer .footerContent .jekyllLink img { margin-top: 10px; margin-left: 5px; width: 2.5%; height: auto; filter: grayscale(100%); }
 
 footer .footerContent .attributionLinks { padding-left: 0.4%; }
+
+.footerColor { grid-column: 1 / 4; grid-row: 4 / 4; background-color: darkslategray; }
 
 /*# sourceMappingURL=styles.css.map */
