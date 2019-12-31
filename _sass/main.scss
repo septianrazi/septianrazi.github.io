@@ -179,9 +179,7 @@ main {
       padding: 15px;
       border-radius: 10px;
 
-      width: 60%;
-      margin: 0 auto;
-
+      width: 70%;
 
       -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
       transition: 0.3s;
@@ -192,6 +190,7 @@ main {
       }
     }
 
+    // roles button
     .role1 {
       @extend %rolesButton;
       grid-area: role1;
@@ -199,18 +198,23 @@ main {
 
     .role2 {
       @extend %rolesButton;
+      margin: 0 auto;
       grid-area: role2;
     }
 
     .role3 {
       @extend %rolesButton;
+      margin-left: auto;
       grid-area: role3;
+      
     }
 
+    // paragraph description CSS
     .bioDescription{
       grid-area: desc;
     }
 
+    // CV Button CSS
     .button {
       grid-area: cvbutton;
 
@@ -220,9 +224,9 @@ main {
       border: none;
       color:  $color2;
       padding: 10px 10px;
-      width: 30%;
-      border-radius: 17% / 50%;
-      margin: 0 auto;
+      width: 35%;
+      border-radius: 15% / 50%;
+      margin-left: auto;
 
       -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
       transition: 0.3s;

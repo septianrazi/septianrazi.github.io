@@ -58,19 +58,19 @@ main section.bio { grid-area: 2; display: grid; grid-template-columns: repeat(3,
 
 main section.bio h2 { grid-area: heading; }
 
-main section.bio .role1, main section.bio .role2, main section.bio .role3 { font-size: 1.5em; font-family: Raleway, sans-serif; text-align: center; text-decoration: none; background-color: darkslategray; color: white; border: none; padding: 15px; border-radius: 10px; width: 60%; margin: 0 auto; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
+main section.bio .role1, main section.bio .role2, main section.bio .role3 { font-size: 1.5em; font-family: Raleway, sans-serif; text-align: center; text-decoration: none; background-color: darkslategray; color: white; border: none; padding: 15px; border-radius: 10px; width: 70%; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
 
 main section.bio .role1:hover, main section.bio .role2:hover, main section.bio .role3:hover { background-color: #395e5e; box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 main section.bio .role1 { grid-area: role1; }
 
-main section.bio .role2 { grid-area: role2; }
+main section.bio .role2 { margin: 0 auto; grid-area: role2; }
 
-main section.bio .role3 { grid-area: role3; }
+main section.bio .role3 { margin-left: auto; grid-area: role3; }
 
 main section.bio .bioDescription { grid-area: desc; }
 
-main section.bio .button { grid-area: cvbutton; text-align: center; font-family: Raleway, sans-serif; background-color: black; border: none; color: white; padding: 10px 10px; width: 30%; border-radius: 17% / 50%; margin: 0 auto; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
+main section.bio .button { grid-area: cvbutton; text-align: center; font-family: Raleway, sans-serif; background-color: black; border: none; color: white; padding: 10px 10px; width: 35%; border-radius: 15% / 50%; margin-left: auto; -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */ transition: 0.3s; }
 
 main section.bio .button a { text-decoration: none; color: white; }
 
