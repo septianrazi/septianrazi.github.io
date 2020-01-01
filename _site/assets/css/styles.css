@@ -80,6 +80,8 @@ main section.experience { grid-area: 3; }
 
 main section.skill { grid-area: 4; }
 
+main section.skill .skillsTable { display: grid; }
+
 main section.skill ul { columns: 3; text-align: center; list-style: none; overflow: hidden; white-space: nowrap; margin-bottom: 7%; }
 
 main section.skill ul li { padding-top: 5px; overflow: hidden; white-space: nowrap; break-inside: avoid-column; }

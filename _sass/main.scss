@@ -256,6 +256,11 @@ main {
   section.skill{
     grid-area: 4;
 
+    .skillsTable {
+      display: grid;
+      
+    }
+
     ul {
       columns: 3;
       text-align: center;
