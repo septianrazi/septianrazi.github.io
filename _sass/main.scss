@@ -258,7 +258,7 @@ main {
 
     .skillsTable {
       display: grid;
-      
+
     }
 
     ul {
@@ -357,6 +357,14 @@ footer {
     .jekyllLink img {
       margin-top: 10px;
       margin-left: 5px;
+      width: 2.5%;
+      height:auto;
+      filter: grayscale(100%)
+    }
+
+    .sassLink img {
+      margin-top: 10px;
+      margin-left: 8px;
       width: 2.5%;
       height:auto;
       filter: grayscale(100%)

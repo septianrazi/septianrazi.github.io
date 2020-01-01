@@ -110,6 +110,8 @@ footer .footerContent .githubLink img { margin-top: 10px; width: 2.5%; height: a
 
 footer .footerContent .jekyllLink img { margin-top: 10px; margin-left: 5px; width: 2.5%; height: auto; filter: grayscale(100%); }
 
+footer .footerContent .sassLink img { margin-top: 10px; margin-left: 8px; width: 2.5%; height: auto; filter: grayscale(100%); }
+
 footer .footerContent .attributionLinks { padding-left: 0.4%; }
 
 .footerColor { grid-column: 1 / 4; grid-row: 4 / 4; background-color: darkslategray; }
