@@ -110,7 +110,7 @@ footer .footerContent { grid-area: footer-content; background-color: darkslategr
 
 footer .footerContent a { color: white; }
 
-footer .footerContent .ccLicense img { margin-top: 10px; max-width: 10%; height: auto; }
+footer .footerContent .ccLicense img { margin-top: 10px; max-width: 5%; height: auto; }
 
 footer .footerContent .githubLink img { margin-top: 10px; width: 2.5%; height: auto; }
 
