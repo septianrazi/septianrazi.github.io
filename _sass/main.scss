@@ -1,5 +1,6 @@
 @import 'defaults.scss';
 @import 'brand.scss';
+@import 'animate';
 
 body {
   background-color: $color2;
@@ -123,6 +124,7 @@ main {
   // /* ------------- */
   // /* INTRO SECTION */
   // /* ------------- */
+
   section.intro{
     grid-area: 1;
 
@@ -243,6 +245,9 @@ main {
       &:hover{
         background-color: #232525;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+        animation-name: pulse;
+        animation-duration: 1s;
       }
     }
   }
