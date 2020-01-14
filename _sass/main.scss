@@ -361,6 +361,11 @@ main {
   
     .socialMediaLinks img {
       width: 30%;
+      transition-duration: 0.5s;
+
+      &:hover {
+        width: 32%
+      }
     }
   }            
 }

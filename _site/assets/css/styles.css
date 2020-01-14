@@ -1743,7 +1743,9 @@ main section.contact ul { list-style-type: none; display: contents; /* text-alig
 
 main section.contact li { text-align: center; /* padding: 14px 16px; */ text-decoration: none; display: inline; margin-left: 10%; margin-right: 10%; }
 
-main section.contact .socialMediaLinks img { width: 30%; }
+main section.contact .socialMediaLinks img { width: 30%; transition-duration: 0.5s; }
+
+main section.contact .socialMediaLinks img:hover { width: 32%; }
 
 footer { display: contents; }
 
