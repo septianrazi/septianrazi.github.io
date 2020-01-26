@@ -1,0 +1,430 @@
+@import 'defaults.scss';
+@import 'brand.scss';
+@import 'animate';
+
+body {
+  background-color: $color2;
+  font-family: "Raleway", sans-serif;
+  height : 100%;
+  margin: 0;
+
+  // Grid settings
+  display: grid;
+  grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end];
+  grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end];
+  grid-template-areas: 
+    "bg bg bg"
+    ". nav ."
+    ". content ."
+    ". footer-content .";
+
+  row-gap: 2vh;
+
+    //font defaults
+    h1  {
+      color: $color3;
+      font-weight: bold;
+      font-size: 3em;
+      font-family: Athiti, sans-serif;
+      }
+    
+    h2  {
+      color: $color1;
+      font-weight: bold;
+      font-size: 2.3em;
+      font-family: Athiti, sans-serif;
+      margin-bottom: 2%;
+      margin-top: 2%;
+    
+      }
+    
+    p, li {
+      font-size: 1.2em;
+    }
+}
+
+.bg {
+  grid-column: left-ws / right-end;
+  grid-row: header-img / content-row;
+  z-index: -1;
+
+  #sketch-holder {
+    position: absolute;
+  }
+
+  .centerpiece {
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    #logo {
+      width: 40%;
+    }
+  
+    h1 {
+      margin-bottom: 15px;
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 2vw;
+    }
+  }
+}
+
+// /* ------------------- */
+// /* NAVIGATION BAR CSS */
+// /* ------------------- */
+
+nav {
+  grid-area: nav;
+
+  font-family: Athiti, sans-serif;
+  font: bold;
+  overflow: hidden;
+  box-sizing: border-box;
+    
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+    display: inline;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 23px;
+  }
+    
+  a {
+    color:  $color1;
+    text-decoration: none;
+  }
+}
+
+main {
+  grid-area: content;
+
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-row-gap: 3vh;
+  grid-template-areas: 
+    "1"
+    "2"
+    "3"
+    "4"
+    "5";
+
+
+  // /* ------------- */
+  // /* INTRO SECTION */
+  // /* ------------- */
+
+  section.intro{
+    grid-area: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-basis: 50%;
+
+    h1 {
+      font-size: 4vw;
+      // float: left;
+    }
+
+    img {
+      width: 17vw;
+      border-radius: 50% / 50%;
+      border-style: solid;
+      border-width: 1vw;
+      border-color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+  }
+
+  // /* ------------ */
+  // /* BIO SECTION */
+  // /* ------------*/
+  section.bio{
+    grid-area: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4 auto);
+    grid-row-gap: 2vh;
+    grid-column-gap: 2vw;
+    grid-template-areas: 
+      "heading heading heading"
+      "role1 role2 role3"
+      "desc desc desc"
+      ". . cvbutton";
+
+    h2 {
+      grid-area: heading;
+    }
+
+    %rolesButton{ 
+      font-size: 1.5em;
+      font-family: $body-text;
+      
+      text-align: center;
+      text-decoration: none;
+      background-color:  $color1; 
+      color:  $color2;
+      border: none;
+
+      padding: 15px;
+      border-radius: 10px;
+
+      width: 70%;
+
+      -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+      transition: 0.3s;
+
+      &:hover{
+        background-color: #395e5e;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    }
+
+    // roles button
+    .role1 {
+      @extend %rolesButton;
+      grid-area: role1;
+    }
+
+    .role2 {
+      @extend %rolesButton;
+      margin: 0 auto;
+      grid-area: role2;
+    }
+
+    .role3 {
+      @extend %rolesButton;
+      margin-left: auto;
+      grid-area: role3;
+      
+    }
+
+    // paragraph description CSS
+    .bioDescription{
+      grid-area: desc;
+    }
+
+    // CV Button CSS
+    .button {
+      grid-area: cvbutton;
+
+      text-align: center;
+      font-family: $body-text;
+      background-color: $color3; 
+      border: none;
+      color:  $color2;
+      padding: 10px 10px;
+      width: 35%;
+      border-radius: 15% / 50%;
+      margin-left: auto;
+
+      -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+      transition: 0.3s;
+
+      a {
+        text-decoration: none;
+        color:  $color2;
+      }
+
+      &:hover{
+        background-color: #232525;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+        animation-name: pulse;
+        animation-duration: 1s;
+      }
+    }
+  }
+
+  // /* ------------------ */
+  // /* EXPERIENCE SECTION */
+  // /* ------------------ */
+  section.experience{
+    grid-area: 3;
+  }
+
+  // /* -------------- */
+  // /* SKILLS SECTION */
+  // /* -------------- */
+  section.skills{
+    grid-area: 4;
+
+    table.skillsTable {
+      display: grid;
+      grid-template-columns: auto 30% 30%;
+      grid-template-rows: repeat(7, auto);
+      grid-row-gap: 2vh;
+      grid-column-gap: 2vw;
+
+
+      thead, tbody, tr {
+        display: contents;
+      }
+
+      tr {
+        font-size: 1.0em;
+
+        td:first-child {
+          font-size: 1.2em;
+        }
+        // td:last-child {
+        //   text-align: right;
+        // }
+      }
+
+      thead {
+        tr {
+          font-size: 1.5em;
+        }
+
+        th.profHeader {
+          text-align: left;
+        }
+        
+        th.famHeader {
+          text-align: left;
+        }
+      }
+    }
+
+    // ul {
+    //   columns: 3;
+    //   text-align: center;
+    //   list-style: none;
+    //   overflow: hidden;
+    //   white-space: nowrap;
+    //   margin-bottom: 7%;
+    // }
+  
+    // ul li {
+    //   padding-top: 5px;
+    //   overflow: hidden;
+    //   white-space: nowrap;
+    //   break-inside: avoid-column;
+    // }
+  
+    // .rating {
+    //   font-family: sans-serif;
+    //   font-size: 2em;
+    //   color:  $color1;
+    // }
+  }
+
+  // /* --------------- */
+  // /* CONTACT SECTION */
+  // /* --------------- */
+  section.contact{
+    grid-area: 5;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+      "heading heading heading heading"
+      "link1 link2 link3 link4 ";
+
+    h2 {
+      grid-area: heading;
+    }
+
+    ul{
+      list-style-type: none;
+      display: contents;
+  
+      /* text-align: center; */
+    }
+  
+    li {
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      display: inline;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  
+    .socialMediaLinks img {
+      width: 30%;
+      transition-duration: 0.5s;
+
+      &:hover {
+        width: 32%
+      }
+    }
+  }            
+}
+
+footer {
+  display: contents; // rule used to be able to use child element in overall grid layout
+
+  // /* -------------- */
+  // /* FOOTER SECTION */
+  // /* -------------- */
+  .footerContent { 
+    grid-area: footer-content;
+
+    background-color:  $color1;
+    color:  $color2;
+    
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+
+    a { 
+      color:  $color2;
+    }
+
+    .ccLicense img {
+      margin-top: 10px;
+      max-width: 5%;
+      height:auto;
+    }
+
+   .githubLink img {
+      margin-top: 10px;
+      width: 2.5%;
+      height:auto;
+    }
+
+    .jekyllLink img {
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 2.5%;
+      height:auto;
+      filter: grayscale(100%)
+    }
+
+    .sassLink img {
+      margin-top: 10px;
+      margin-left: 8px;
+      width: 2.5%;
+      height:auto;
+      filter: grayscale(100%)
+    }
+  
+    .attributionLinks {
+      padding-left: 0.4%;
+    }
+  }
+}
+
+.footerColor {
+  grid-column: 1 / 4;
+  grid-row: 4 / 4;   
+  background-color:  $color1;
+}

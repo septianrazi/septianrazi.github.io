@@ -5,7 +5,13 @@
     <meta name="author" content="Septian Razi">
     <meta name="description" content="Personal Website of Septian Razi, an up and coming Data Scientist, Web Developer from ANU">
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">  
-    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    {% if page.css %}
+      {% for stylesheet in page.css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
+      {% endfor %}
+    {% endif %}
+
+    
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <!-- <script src="assets/js/p5.dom.js"></script>
     <script src="assets/js/p5.sound.js"></script> -->
