@@ -14,7 +14,7 @@ body {
   grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end];
   grid-template-areas: 
     "bg bg bg"
-    ". nav ."
+    "nav nav nav"
     ". content ."
     ". footer-content .";
 
@@ -85,6 +85,9 @@ nav {
   font: bold;
   overflow: hidden;
   box-sizing: border-box;
+  background-color: $color2;
+  padding-top: 1em;
+  transition: all 0.3s; 
     
   ul {
     list-style-type: none;
@@ -105,7 +108,25 @@ nav {
     color:  $color1;
     text-decoration: none;
   }
+
 }
+
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: $color1;
+
+    a {
+      color:  $color2;
+      text-decoration: none;
+    }
+
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.55);
+  }
 
 main {
   grid-area: content;

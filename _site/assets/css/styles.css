@@ -1659,7 +1659,7 @@ html { height: 100%; font-size: 100%; margin: 0; }
 
 @media (print), (prefers-reduced-motion: reduce) { .animated { -webkit-animation-duration: 1ms !important; animation-duration: 1ms !important; -webkit-transition-duration: 1ms !important; transition-duration: 1ms !important; -webkit-animation-iteration-count: 1 !important; animation-iteration-count: 1 !important; } }
 
-body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end]; grid-template-areas: "bg bg bg" ". nav ." ". content ." ". footer-content ."; row-gap: 2vh; }
+body { background-color: white; font-family: "Raleway", sans-serif; height: 100%; margin: 0; display: grid; grid-template-columns: [left-ws] 20% [content-col] 60% [right-ws] 20% [right-end]; grid-template-rows: [header-img] 90% [navbar] 10% [content-row] auto [footer] auto [page-end]; grid-template-areas: "bg bg bg" "nav nav nav" ". content ." ". footer-content ."; row-gap: 2vh; }
 
 body h1 { color: black; font-weight: bold; font-size: 3em; font-family: Athiti, sans-serif; }
 
@@ -1679,13 +1679,18 @@ body p, body li { font-size: 1.2em; }
 
 .bg .centerpiece p { font-size: 2vw; }
 
-nav { grid-area: nav; font-family: Athiti, sans-serif; font: bold; overflow: hidden; box-sizing: border-box; }
+nav { grid-area: nav; font-family: Athiti, sans-serif; font: bold; overflow: hidden; box-sizing: border-box; background-color: white; padding-top: 1em; transition: all 0.3s; }
 
 nav ul { list-style-type: none; margin: 0; padding: 0; text-align: center; }
 
 nav li { text-align: center; display: inline; padding: 14px 16px; text-decoration: none; font-size: 23px; }
 
 nav a { color: darkslategray; text-decoration: none; }
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky { position: fixed; top: 0; width: 100%; padding-top: 1em; padding-bottom: 1em; background-color: darkslategray; box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.55); }
+
+.sticky a { color: white; text-decoration: none; }
 
 main { grid-area: content; display: grid; grid-template-rows: repeat(5, auto); grid-row-gap: 3vh; grid-template-areas: "1" "2" "3" "4" "5"; }
 
