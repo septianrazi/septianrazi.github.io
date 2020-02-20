@@ -125,7 +125,7 @@ nav {
       text-decoration: none;
     }
 
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.55);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
   }
 
 main {
@@ -278,6 +278,55 @@ main {
   // /* ------------------ */
   section.experience{
     grid-area: 3;
+
+    .masonry {
+      background: $color2;
+      max-width: 100%;
+    }
+    
+    /* clear fix */
+    .masonry:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    
+    /* ---- .grid-item ---- */
+    
+    .masonry-sizer,
+    .masonry-item {
+      width: 31%;
+    }
+    
+    .masonry-item {
+      float: left;
+      margin-bottom: 20px;
+      border-radius: 5px 5px 5px 5px;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
+
+      img {
+        display: block;
+        max-width: 100%;
+        border-radius: 5px 5px 0px 0px;
+      }
+
+      .masonryDescription {
+        background-color: $color1;
+        border-radius: 0px 0px 5px 5px;
+        padding: 0.5em;
+
+        h4 {
+          color: $color2;
+          font-size: 1.3em;
+        }
+
+        p {
+          color: $color2;
+          font-size: 0.9em;
+        }
+      }
+    }
+    
   }
 
   // /* -------------- */
