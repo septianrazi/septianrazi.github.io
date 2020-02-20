@@ -358,6 +358,7 @@ main {
       transition: 0.3s;
       border-radius: 5px 5px 0px 0px;
       width: 16.6666%;
+      font-size: 1.1em;
     }
 
     /* Change background color of buttons on hover */
@@ -380,6 +381,7 @@ main {
       border-radius: 0px 0px 5px 5px;
       color: $color2;
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
+      
 
       ul {
         list-style-type: none;
@@ -392,9 +394,9 @@ main {
         color: $color2;
         text-align: center;
         display: inline;
-        padding: 14px 16px;
+        padding: 1em 1em;
         text-decoration: none;
-        font-size: 23px;
+        font-size: 1.2em;
       }
     }
   }

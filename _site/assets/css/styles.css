@@ -103,7 +103,7 @@ main section.skills { grid-area: 4; /* Style the tab */ /* Style the buttons tha
 
 main section.skills .tab { overflow: hidden; background-color: white; border-radius: 5px 5px 0px 0px; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
 
-main section.skills .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; border-radius: 5px 5px 0px 0px; width: 16.6666%; }
+main section.skills .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; border-radius: 5px 5px 0px 0px; width: 16.6666%; font-size: 1.1em; }
 
 main section.skills .tab button:hover { background-color: #ddd; }
 
@@ -113,7 +113,7 @@ main section.skills .tabcontent { display: none; padding: 2em 1em; border-top: n
 
 main section.skills .tabcontent ul { list-style-type: none; margin: 0; padding: 0; text-align: center; }
 
-main section.skills .tabcontent li { color: white; text-align: center; display: inline; padding: 14px 16px; text-decoration: none; font-size: 23px; }
+main section.skills .tabcontent li { color: white; text-align: center; display: inline; padding: 1em 1em; text-decoration: none; font-size: 1.2em; }
 
 main section.contact { grid-area: 5; display: grid; grid-template-columns: repeat(4, auto); grid-template-columns: repeat(2, auto); grid-template-areas: "heading heading heading heading" "link1 link2 link3 link4 "; }
 
