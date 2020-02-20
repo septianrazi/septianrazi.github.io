@@ -47,7 +47,7 @@ nav li { text-align: center; display: inline; padding: 14px 16px; text-decoratio
 nav a { color: darkslategray; text-decoration: none; }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky { position: fixed; top: 0; width: 100%; padding-top: 1em; padding-bottom: 1em; background-color: darkslategray; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
+.sticky { position: fixed; top: 0; width: 100%; padding-top: 1em; padding-bottom: 1em; background-color: darkslategray; z-index: 99; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
 
 .sticky a { color: white; text-decoration: none; }
 
@@ -95,25 +95,25 @@ main section.experience .masonry-item img { display: block; max-width: 100%; bor
 
 main section.experience .masonry-item .masonryDescription { background-color: darkslategray; border-radius: 0px 0px 5px 5px; padding: 0.5em; }
 
-main section.experience .masonry-item .masonryDescription h4 { color: white; font-size: 1.3em; }
+main section.experience .masonry-item .masonryDescription h4 { color: white; font-size: 1.3em; font-weight: 0.1em; margin-bottom: 0.3em; }
 
 main section.experience .masonry-item .masonryDescription p { color: white; font-size: 0.9em; }
 
-main section.skills { grid-area: 4; }
+main section.skills { grid-area: 4; /* Style the tab */ /* Style the buttons that are used to open the tab content */ /* Change background color of buttons on hover */ /* Create an active/current tablink class */ /* Style the tab content */ }
 
-main section.skills table.skillsTable { display: grid; grid-template-columns: auto 30% 30%; grid-template-rows: repeat(7, auto); grid-row-gap: 2vh; grid-column-gap: 2vw; }
+main section.skills .tab { overflow: hidden; background-color: white; border-radius: 5px 5px 0px 0px; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
 
-main section.skills table.skillsTable thead, main section.skills table.skillsTable tbody, main section.skills table.skillsTable tr { display: contents; }
+main section.skills .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; border-radius: 5px 5px 0px 0px; width: 16.6666%; }
 
-main section.skills table.skillsTable tr { font-size: 1.0em; }
+main section.skills .tab button:hover { background-color: #ddd; }
 
-main section.skills table.skillsTable tr td:first-child { font-size: 1.2em; }
+main section.skills .tab button.active { background-color: darkslategray; color: white; }
 
-main section.skills table.skillsTable thead tr { font-size: 1.5em; }
+main section.skills .tabcontent { display: none; padding: 2em 1em; border-top: none; background-color: darkslategray; border-radius: 0px 0px 5px 5px; color: white; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
 
-main section.skills table.skillsTable thead th.profHeader { text-align: left; }
+main section.skills .tabcontent ul { list-style-type: none; margin: 0; padding: 0; text-align: center; }
 
-main section.skills table.skillsTable thead th.famHeader { text-align: left; }
+main section.skills .tabcontent li { color: white; text-align: center; display: inline; padding: 14px 16px; text-decoration: none; font-size: 23px; }
 
 main section.contact { grid-area: 5; display: grid; grid-template-columns: repeat(4, auto); grid-template-columns: repeat(2, auto); grid-template-areas: "heading heading heading heading" "link1 link2 link3 link4 "; }
 
@@ -124,8 +124,6 @@ main section.contact ul { list-style-type: none; display: contents; /* text-alig
 main section.contact li { text-align: center; /* padding: 14px 16px; */ text-decoration: none; display: inline; margin-left: 10%; margin-right: 10%; }
 
 main section.contact .socialMediaLinks img { width: 30%; transition-duration: 0.5s; }
-
-main section.contact .socialMediaLinks img:hover { width: 32%; }
 
 footer { display: contents; }
 

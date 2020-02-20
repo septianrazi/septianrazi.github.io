@@ -99,156 +99,82 @@ css: styles
     title = "Best Solution for Limited Resources" 
     description = "ANU Innovation Challenge" %}
 </div>
-<!-- 
-    <div class= "masonry">
-      <div class = "masonryItem"><img src = "assets/images/28514383_1718835191473024_5667075781018898648_o.jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/28877253_544840932565688_2130063666_o.jpg"></div class = "masonryItem">
-      <div class = "masonryItem"><img src = "assets/images/38908964_1973470402704903_544426094481113088_o.jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/28879670_544840949232353_616694718_o (1).jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/28424873_1718837568139453_7907586326139498605_o.jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/28876564_544840942565687_122786099_o.jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/D60_8840.jpg"></div>
-      <div class = "masonryItem"><img src = "assets/images/DS1_5675.jpg"></div>
-    </div> -->
-    <ul>
-        <li>Bachelor of Information Technology, Australian National University</li>
-        <li>Loading Animation Icons, P5.JS</li>
-        <li>President, ANU Indonesian Students Association</li>
-        <li>University Tutor, Australian National University</li>
-        <li>Project Manager, ANU Techlauncher UI Prototype Team with Accenture</li> 
-        <li>API Test Client, ANU Techlauncher with Xero Canberra</li>
-      </ul>
   </section>
 
   <section class = "skills">
     <h2 id="Skills"> Skills </h2>
     <!-- MAKE DASHBOARD -->
-    <table class = "skillsTable">
-      <thead>
-        <tr>
-          <th></th>
-          <th class = "profHeader">Proficient</th>
-          <th class = "famHeader">Familiar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Languages</td>
-          <td>
-            <ul>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>Python</li>
-              <li>C#</li>
-            </ul>
-          <td>
-            <ul>
-              <li>Ada</li>
-              <li>ARM Assembly</li>
-            </ul>
-        </tr>      
-        <tr>
-          <td>Data</td>
-          <td>
-            <ul>
-              <li>Python</li>
-              <li>Pandas</li>
-              <li>Jupyter Notebook</li>
-              <li>Excel</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>MySQL</li>
-              <li>Rattle</li>
-              <li>R</li>
-              <li>Scikit-learn</li>
-              <li>Matplotlib</li>
-              <li>Seaborn</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Web</td>
-          <td>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Sass</li>
-              <li>Jekyll</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>React.JS</li>
-              <li>Node.JS</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Technologies</td>
-          <td>
-            <ul>
-              <li>Git</li>
-              <li>Windows</li>
-              <li>Bash</li>
-              <li>p5.js</li>
-              <li>Unity</li>
-              <li>Visual Studio</li>
-              <li>IntelliJ IDEA</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Android</li>
-              <li>Linux</li>
-              <li>Mixed Reality Toolkit</li>
-              <li>Virtual Reality</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Team</td>
-          <td>
-            <ul>
-              <li>Confluence</li>
-              <li>Trello</li>
-              <li>Kanban</li>
-              <li>Slack</li>
-              <li>Microsoft Office</li>
-              <li>Technical Report Writing</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Agile</li>
-              <li>Scrum</li>
-              <li>Project Management</li>
-              <li>Design Document Writing</li>
-              <li>Test-Driven Development</li>
-              <li>Design Thinking</li>
-              <li>Systems Engineering</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Other</td>
-          <td>
-            <ul>
-              <li>Canva</li>
-              <li>Beatboxing</li>
-              <li>Minecraft</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Adobe Creative Suite</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Languages')" id= "defaultOpen">Languages</button>
+      <button class="tablinks" onclick="openCity(event, 'Data')">Data</button>
+      <button class="tablinks" onclick="openCity(event, 'Web')">Web</button>
+      <button class="tablinks" onclick="openCity(event, 'Technologies')">Technologies</button>
+      <button class="tablinks" onclick="openCity(event, 'Team')">Team</button>
+      <button class="tablinks" onclick="openCity(event, 'Other')">Other</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Languages" class="tabcontent">
+      <ul>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C#</li>
+      </ul>
+    </div>
+
+    <div id="Data" class="tabcontent">
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Jupyter Notebook</li>
+        <li>Excel</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    <div id="Web" class="tabcontent">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Sass</li>
+        <li>Jekyll</li>
+        <li>React</li>
+      </ul>
+    </div>
+
+    <div id="Technologies" class="tabcontent">
+      <ul>
+        <li>Git</li>
+        <li>Windows</li>
+        <li>Bash</li>
+        <li>Unity</li>
+        <li>Visual Studio</li>
+        <li>IntelliJ IDEA</li>
+      </ul>
+    </div>
+
+    <div id="Team" class="tabcontent">
+      <ul>
+        <li>Confluence</li>
+        <li>Kanban</li>
+        <li>Slack</li>
+        <li>Project Management</li>
+        <li>Agile</li>
+        <li>Technical Writing</li>
+      </ul>
+    </div>
+    
+    <div id="Other" class="tabcontent">
+      <ul>
+        <li>Canva</li>
+        <li>Beatboxing</li>
+        <li>Minecraft</li>
+      </ul>
+    </div>
     <!-- <ul>
       <li>HTML<div class="rating">●●●●●</div></li>
       <li>CSS<div class="rating">●●●●●</div></li>

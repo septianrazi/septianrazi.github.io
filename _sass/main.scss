@@ -120,6 +120,8 @@ nav {
     padding-bottom: 1em;
     background-color: $color1;
 
+    z-index: 99;
+
     a {
       color:  $color2;
       text-decoration: none;
@@ -318,6 +320,8 @@ main {
         h4 {
           color: $color2;
           font-size: 1.3em;
+          font-weight: 0.1em;
+          margin-bottom: 0.3em;
         }
 
         p {
@@ -335,65 +339,64 @@ main {
   section.skills{
     grid-area: 4;
 
-    table.skillsTable {
-      display: grid;
-      grid-template-columns: auto 30% 30%;
-      grid-template-rows: repeat(7, auto);
-      grid-row-gap: 2vh;
-      grid-column-gap: 2vw;
-
-
-      thead, tbody, tr {
-        display: contents;
-      }
-
-      tr {
-        font-size: 1.0em;
-
-        td:first-child {
-          font-size: 1.2em;
-        }
-        // td:last-child {
-        //   text-align: right;
-        // }
-      }
-
-      thead {
-        tr {
-          font-size: 1.5em;
-        }
-
-        th.profHeader {
-          text-align: left;
-        }
-        
-        th.famHeader {
-          text-align: left;
-        }
-      }
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      background-color: $color2;
+      border-radius: 5px 5px 0px 0px;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
     }
 
-    // ul {
-    //   columns: 3;
-    //   text-align: center;
-    //   list-style: none;
-    //   overflow: hidden;
-    //   white-space: nowrap;
-    //   margin-bottom: 7%;
-    // }
-  
-    // ul li {
-    //   padding-top: 5px;
-    //   overflow: hidden;
-    //   white-space: nowrap;
-    //   break-inside: avoid-column;
-    // }
-  
-    // .rating {
-    //   font-family: sans-serif;
-    //   font-size: 2em;
-    //   color:  $color1;
-    // }
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      border-radius: 5px 5px 0px 0px;
+      width: 16.6666%;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: $color1;
+      color: $color2
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 2em 1em;
+      border-top: none;
+      background-color: $color1;
+      border-radius: 0px 0px 5px 5px;
+      color: $color2;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+    
+      li {
+        color: $color2;
+        text-align: center;
+        display: inline;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 23px;
+      }
+    }
   }
 
   // /* --------------- */
@@ -433,9 +436,9 @@ main {
       width: 30%;
       transition-duration: 0.5s;
 
-      &:hover {
-        width: 32%
-      }
+      // &:hover {
+      //   width: 32%
+      // }
     }
   }            
 }
