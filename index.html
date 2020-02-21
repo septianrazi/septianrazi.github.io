@@ -56,9 +56,25 @@ css: styles
 
   <section class = "experience">
     <h2 id="Experience"> What I've done </h2>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+
     <!-- MAKE MASONRY -->
 <div class="masonry">
   <div class="masonry-sizer"></div>
+  
   {% include masonryItem.html imgUrl = "assets/images/anu.png" 
     title = "B Information Technology" 
   description = "Australian National University" %}
@@ -98,6 +114,10 @@ css: styles
   {% include masonryItem.html imgUrl = "assets/images/anuInnovationChallenge.jpg" 
     title = "Best Solution for Limited Resources" 
     description = "ANU Innovation Challenge" %}
+
+  {% include masonryItem.html imgUrl = "assets/images/fennerSymposium.PNG" 
+    title = "Fenner Survey Analytics" 
+    description = "Fenner Hall Symposium, ANU" %}
 </div>
   </section>
 
@@ -122,6 +142,7 @@ css: styles
         <li>Java</li>
         <li>Python</li>
         <li>C#</li>
+        <li>Haskell</li>
       </ul>
     </div>
 

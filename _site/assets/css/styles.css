@@ -81,7 +81,15 @@ main section.bio .button a { text-decoration: none; color: white; }
 
 main section.bio .button:hover { background-color: #232525; box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); animation-name: pulse; animation-duration: 1s; }
 
-main section.experience { grid-area: 3; /* clear fix */ /* ---- .grid-item ---- */ }
+main section.experience { grid-area: 3; /* The Modal (background) */ /* Modal Content/Box */ /* The Close Button */ /* clear fix */ /* ---- .grid-item ---- */ }
+
+main section.experience .modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: black; /* Fallback color */ background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */ }
+
+main section.experience .modal-content { background-color: #fefefe; margin: 15% auto; /* 15% from the top and centered */ padding: 20px; border: 1px solid #888; width: 80%; /* Could be more or less, depending on screen size */ }
+
+main section.experience .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+
+main section.experience .close:hover, main section.experience .close:focus { color: black; text-decoration: none; cursor: pointer; }
 
 main section.experience .masonry { background: white; max-width: 100%; }
 
