@@ -1,23 +1,4 @@
 // ----------
-// MASONRY 
-// ----------
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-// init Masonry
-var grid = document.querySelector('.masonry');
-
-var msnry = new Masonry( grid, {
-  itemSelector: '.masonry-item',
-  columnWidth: '.masonry-sizer',
-  gutter: 20,
-});
-
-imagesLoaded( grid ).on( 'progress', function() {
-  // layout Masonry after each image loads
-  msnry.layout();
-});
-
-// ----------
 // NAV SCROLL 
 // ----------
 // SOURCE: https://www.w3schools.com/howto/howto_js_sticky_navHeader.asp
@@ -67,20 +48,35 @@ function openCity(evt, cityName) {
 
   document.getElementById("defaultOpen").click();
 
+// ----------
+// MASONRY 
+// ----------
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
-  // Modal
+// init Masonry
+var grid = document.querySelector('.masonry');
 
+var msnry = new Masonry( grid, {
+  itemSelector: '.masonry-item',
+  columnWidth: '.masonry-sizer',
+  gutter: 20,
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
+
+// -------------
+// MODALS
+// -------------
 // Get the modal
 var modals = document.querySelectorAll(".modal");
 
 // Get the <span> element that closes the modal
 var spans = document.getElementsByClassName("close");
 
-// When the user clicks on the button, open the modal
-// btn.onclick = displayModal(modal)
-
 function displayModal(thisModalID) {
-  console.log(thisModalID);
   thisModal = document.getElementById(thisModalID)
   thisModal.style.display = "block";
 }
@@ -88,18 +84,20 @@ function displayModal(thisModalID) {
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < spans.length; i++) {
   spans[i].onclick = function() {
-     for (var index in modals) {
-       if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     }
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
   }
- }
+}
  
- // When the user clicks anywhere outside of the modal, close it
- window.onclick = function(event) {
-     if (event.target.classList.contains('modal')) {
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
       for (var index in modals) {
-       if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
       }
-     }
- }
+    }
+}
+
+
 
