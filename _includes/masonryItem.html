@@ -1,7 +1,16 @@
-<div class="masonry-item">
+<div class="masonry-item" onclick= "displayModal('{{ include.id }}')">
     <img src="{{ include.imgUrl }}" />
     <div class = "masonryDescription">
       <h4> {{ include.title }} </h4>
       <p> {{ include.description }} </p>
-    </div>
+    </div>  
+</div>
+
+<!-- The Modal -->
+<div id= {{ include.id }} class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick = "">&times;</span>
+    <p>Some text in the Modal..</p>
   </div>
+</div>

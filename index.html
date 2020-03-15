@@ -56,68 +56,112 @@ css: styles
 
   <section class = "experience">
     <h2 id="Experience"> What I've done </h2>
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+
+ <!-- Trigger/Open The Modal -->
+
+ <!-- <div id="myBtn" onclick= "displayModal(modal)">Open Modal</div>   -->
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<!-- <div id="myModal" class="modal"> -->
 
   <!-- Modal content -->
-  <div class="modal-content">
+  <!-- <div class="modal-content">
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
   </div>
 
-</div>
+</div> -->
 
 
     <!-- MAKE MASONRY -->
 <div class="masonry">
   <div class="masonry-sizer"></div>
   
-  {% include masonryItem.html imgUrl = "assets/images/anu.png" 
+
+  {% include masonryItem.html 
     title = "B Information Technology" 
-  description = "Australian National University" %}
-
-  {% include masonryItem.html imgUrl = "assets/images/HololensXRGenomics.gif" 
+    description = "Australian National University" 
+    id = "degree"
+    imgUrl = "assets/images/anu.png" 
+    %}
+  
+  {% include masonryItem.html 
     title = "Vacation Scholar" 
-    description = "CSIRO's Data61" %}
+    description = "CSIRO's Data61" 
+    id = "csiro"
+    imgUrl = "assets/images/HololensXRGenomics.gif" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/uiPrototype.jpg" 
+  {% include masonryItem.html 
     title = "Project Manager" 
-    description = "UI Prototype with Accenture & ANU Techlauncher" %}
+    description = "UI Prototype with Accenture & ANU Techlauncher" 
+    id = "accenture"
+    imgUrl = "assets/images/uiPrototype.jpg" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/anuTechlauncher.jpg" 
+  {% include masonryItem.html 
     title = "Front-End Developer" 
-  description = "API Test Client with Xero & ANU Techlauncher" %}
+    description = "API Test Client with Xero & ANU Techlauncher" 
+    id = "xero"
+    imgUrl = "assets/images/anuTechlauncher.jpg" 
+    %}
   
-  {% include masonryItem.html imgUrl = "assets/images/loadingIcon.PNG" 
+  {% include masonryItem.html 
     title = "Loading-Icons.p5" 
-    description = "Written in p5 and Javascript" %}
+    description = "Written in p5 and Javascript" 
+    id = "loadingIconP5"
+    imgUrl = "assets/images/loadingIcon.PNG" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/govHack.jpg" 
+  {% include masonryItem.html 
+    title = "Website Assistant Developer" 
+    description = "3A Institute" 
+    id = "3ai"
+    imgUrl = "assets/images/3ai_website.PNG" 
+    %}
+
+  {% include masonryItem.html 
     title = "ATO for Individuals Runner Up" 
-    description = "GovHack 2019" %}
+    description = "GovHack 2019" 
+    id = "govhack2019"
+    imgUrl = "assets/images/govHack.jpg" 
+    %}
   
-  {% include masonryItem.html imgUrl = "assets/images/arduino.jpg" 
+  {% include masonryItem.html 
     title = "Casual/Sessional Academic" 
-    description = "ANU Research School of Computer Science" %}
+    description = "ANU Research School of Computer Science" 
+    id = "tutor"
+    imgUrl = "assets/images/arduino.jpg" 
+    %}
 
-   {% include masonryItem.html imgUrl = "assets/images/anuisa.jpg" 
+   {% include masonryItem.html 
     title = "President" 
-    description = "ANU Indonesian Students Association" %}
+    description = "ANU Indonesian Students Association" 
+    id = "anuisa"
+    imgUrl = "assets/images/anuisa.jpg" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/sr.jpg" 
+  {% include masonryItem.html 
     title = "Senior Resident" 
-    description = "Fenner Hall, ANU" %}
+    description = "Fenner Hall, ANU" 
+    id = "fennerSR"
+    imgUrl = "assets/images/sr.jpg" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/anuInnovationChallenge.jpg" 
+  {% include masonryItem.html 
     title = "Best Solution for Limited Resources" 
-    description = "ANU Innovation Challenge" %}
+    description = "ANU Innovation Challenge" 
+    id = "anuInnovationChallenge"
+    imgUrl = "assets/images/anuInnovationChallenge.jpg" 
+    %}
 
-  {% include masonryItem.html imgUrl = "assets/images/fennerSymposium.PNG" 
+  {% include masonryItem.html 
     title = "Fenner Survey Analytics" 
-    description = "Fenner Hall Symposium, ANU" %}
+    description = "Fenner Hall Symposium, ANU" 
+    id = "fennerSymposium"
+    imgUrl = "assets/images/fennerSymposium.PNG" 
+    %}
+
 </div>
   </section>
 
