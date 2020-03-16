@@ -85,7 +85,7 @@ main section.experience { grid-area: 3; /* The Modal (background) */ /* clear fi
 
 main section.experience .modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: black; /* Fallback color */ background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */ animation-name: fadeIn; animation-duration: 0.05s; /* Modal Content/Box */ /* The Close Button */ }
 
-main section.experience .modal .modal-content { background-color: #fefefe; padding: 20px; border: 1px solid #888; width: 70%; /* Could be more or less, depending on screen size */ border-radius: 1em; animation-name: zoomIn; animation-duration: 0.1s; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: grid; grid-template-columns: 70% auto; grid-template-rows: auto auto auto; grid-column-gap: 2vw; grid-row-gap: 2vh; grid-template-areas: "img title" "img body" "img footer"; }
+main section.experience .modal .modal-content { background-color: #fefefe; padding: 20px; border: 1px solid #888; width: 75%; /* Could be more or less, depending on screen size */ border-radius: 1em; animation-name: zoomIn; animation-duration: 0.1s; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: grid; grid-template-columns: 70% auto; grid-template-rows: auto auto auto; grid-column-gap: 2vw; grid-row-gap: 2vh; grid-template-areas: "img title" "img body" "img footer"; }
 
 main section.experience .modal .modal-image { grid-area: img; }
 
@@ -93,13 +93,15 @@ main section.experience .modal .modal-image img { max-width: 100%; }
 
 main section.experience .modal .modal-header { grid-area: title; }
 
-main section.experience .modal .modal-header h4 { margin-top: 0px; margin-bottom: 0px; }
+main section.experience .modal .modal-header h4 { margin-top: 0.3em; font-family: Raleway, sans-serif; color: #5d6666; }
 
 main section.experience .modal .modal-body { grid-area: body; }
 
-main section.experience .modal .modal-body .stack { font-style: italic; font-size: 0.9em; color: #5d6666; }
+main section.experience .modal .modal-body p { font-size: 0.95em; }
 
-main section.experience .modal .modal-footer { grid-area: footer; }
+main section.experience .modal .modal-body .stack { font-style: italic; font-size: 0.8em; color: #5d6666; }
+
+main section.experience .modal .modal-footer { font-size: 0.8em; grid-area: footer; }
 
 main section.experience .modal .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
 
@@ -111,7 +113,9 @@ main section.experience .masonry:after { content: ''; display: block; clear: bot
 
 main section.experience .masonry-sizer, main section.experience .masonry-item { width: 31%; }
 
-main section.experience .masonry-item { float: left; margin-bottom: 20px; border-radius: 5px 5px 5px 5px; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); }
+main section.experience .masonry-item { float: left; margin-bottom: 20px; border-radius: 5px 5px 5px 5px; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.55); transition: 0.3s; }
+
+main section.experience .masonry-item:hover { box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 main section.experience .masonry-item img { display: block; max-width: 100%; border-radius: 5px 5px 0px 0px; }
 

@@ -304,7 +304,7 @@ main {
         //  margin: 10% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
-        width: 70%; /* Could be more or less, depending on screen size */
+        width: 75%; /* Could be more or less, depending on screen size */
         border-radius: 1em;
 
         animation-name: zoomIn;
@@ -340,23 +340,35 @@ main {
         grid-area: title;
 
         h4 {
-          margin-top: 0px;
-          margin-bottom: 0px;
+          margin-top: 0.3em;
+          font-family: Raleway, sans-serif;
+          color: #5d6666;
         }
       }
 
       .modal-body {
         grid-area: body;
 
+        p {
+          font-size: 0.95em;
+        }
+
         .stack {
           font-style: italic;
-          font-size: 0.9em;
+          font-size: 0.8em;
           color: #5d6666;
         }
       }
 
       .modal-footer {
+        font-size: 0.8em;
         grid-area: footer;
+
+        // p {
+        //   position: fixed;
+        //   bottom: 0;
+        //   padding-bottom: 20px;
+        // }
       }
 
       /* The Close Button */
@@ -384,6 +396,7 @@ main {
     .masonry {
       background: $color2;
       max-width: 100%;
+
     }
     
     /* clear fix */
@@ -405,6 +418,12 @@ main {
       margin-bottom: 20px;
       border-radius: 5px 5px 5px 5px;
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
+
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
 
       img {
         display: block;
