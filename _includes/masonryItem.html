@@ -1,4 +1,4 @@
-<div class="masonry-item" onclick= "displayModal('{{ include.id }}')">
+<div class="masonry-item" onclick= "displayModal('{{ include.id }}')" data-aos= "fade-up">
     <img src="{{ include.imgURL }}" />
     <div class = "masonryDescription">
       <h4> {{ include.title }} </h4>
@@ -14,9 +14,7 @@
       {% if include.modalImgURL %} 
         <img src = "{{ include.modalImgURL }}"/>
       {% elsif include.video %} 
-        <div class="spacing youtube">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen></iframe>
       {% else %}
         <img src = "{{ include.imgURL }}"/>
       {% endif %} 

@@ -33,12 +33,12 @@ css: styles
 
   <!-- This is my subheading for my main content -->
 <main>
-  <section class= 'intro'>
+  <section class= 'intro' data-aos= "fade-up" data-aos-once="true">
     <h1 class="hi"> Hey, <br>  I'm Razi</h1>
-    <img src="assets/images/main-image2-square.jpg">
+    <img src="assets/images/main-image2-square.jpg" data-aos= "fade-up" data-aos-anchor-placement="top-center" data-aos-once="true">
   </section>
 
-  <section class = "bio" id= "bio">
+  <section class = "bio" id= "bio" data-aos= "fade-up" data-aos-anchor-placement="top-center">
     <h2 id="Bio"> I'm a prospective </h2>
 
     <div class="role1">Developer</div>
@@ -54,7 +54,7 @@ css: styles
     </div>
   </section>
 
-  <section class = "experience">
+  <section class = "experience" data-aos= "fade-up">
     <h2 id="Experience"> What I've done </h2>
 
  <!-- Trigger/Open The Modal -->
@@ -119,7 +119,7 @@ css: styles
       This involved managing a team of seven in delivering research, UI prototypes and testing alongside communicating with stakeholders.
       Developed a Testing Environment using React alongside a basic UI Prototype for a Vehicle Dashboard.
     "
-    stack = "React, Agile, Confluence, Git"
+    stack = "React, Firebase, Agile, Confluence, Git"
     modalImgURL = "assets/images/DemoGifs/accentureUIPrototype.gif"
     sourceURL = "work.html"
     %}
@@ -203,6 +203,22 @@ css: styles
     sourceURL = "https://cs.anu.edu.au/courses/comp1720/people/"
     %}
 
+  {% include masonryItem.html 
+    title = "Space Crusaders Android Game" 
+    description = "Written in Java" 
+    id = "spaceCrusaders"
+    imgURL = "assets/images/spaceCrusaders.PNG" 
+    year = "2018"
+    text = "
+      Space crusaders is one of the first mobile applications I made. 
+      As part of ANU's Software Design Methodologies course (COMP2100), I worked alongside 3 other friends
+      and came up with a basic video game, implementing ideas learnt from the course including
+      design patterns and test driven development.
+    "
+    stack = "Java, Android Studio, Git"
+    sourceURL = "https://github.com/septianrazi/SpaceCrusaders"
+    %}
+
    {% include masonryItem.html 
     title = "President" 
     description = "ANU Indonesian Students Association" 
@@ -271,7 +287,7 @@ css: styles
 
   </section>
 
-  <section class = "skills">
+  <section class = "skills" data-aos= "fade-up">
     <h2 id="Skills"> Skills </h2>
     <!-- MAKE DASHBOARD -->
 
@@ -346,39 +362,9 @@ css: styles
         <li>Minecraft</li>
       </ul>
     </div>
-    <!-- <ul>
-      <li>HTML<div class="rating">●●●●●</div></li>
-      <li>CSS<div class="rating">●●●●●</div></li>
-      <li>Javascript<div class="rating">●●●●●</div></li>
-      <li>Python<div class="rating">●●●●●</div></li>
-      <li>Java<div class="rating">●●●○○</div></li>
-      <li>MySQL<div class="rating">●●●○○</div></li>
-      <li>ARM Assembly<div class="rating">●●●○○</div></li>
-      <li>Ada<div class="rating">●●●○○</div></li>
-    </ul>
-    <ul>
-      <li>Data Analytics<div class="rating">●●●●○</div></li>
-      <li>Public Speaking<div class="rating">●●●●○</div></li>
-      <li>Agile<div class="rating">●●●●○</div></li>
-      <li>Leadership<div class="rating">●●●●○</div></li>
-      <li>Communication<div class="rating">●●●●○</div></li>
-      <li>Scrum<div class="rating">●●●●○</div></li>
-      <li>Project Management<div class="rating">●●●●○</div></li>
-  </ul>
-    <ul>
-        <li>Microsoft Office<div class="rating">●●●●●</div></li>
-        <li>Git<div class="rating">●●●●●</div></li>
-        <li>Windows<div class="rating">●●●●●</div></li>
-        <li>Mac<div class="rating">●●●●○</div></li>
-        <li>Adobe Photoshop<div class="rating">●●●●○</div></li>
-        <li>Command Line<div class="rating">●●●●●</div></li>
-        <li>Beatboxing<div class="rating">●●●●○</div></li>
-        <li>Minecraft<div class="rating">●●●●○</div></li>
-
-    </ul> -->
   </section>
   
-  <section class="contact">
+  <section class="contact" data-aos= "fade-up">
   <h2> <a id="contactMe"></a> Stalk me here </h2>
   <ul class = 'socialMediaLinks'>
       <li id= "linkedin"><a href="https://www.linkedin.com/in/septianrazi/"><img src= "assets/images/linkedin.png"></a></li>
@@ -391,7 +377,7 @@ css: styles
   <!-- <h2> fun scrolly game at the end </h2> -->
 </main>
 
-<div class= "footerColor"></div>
+<div class= "footerColor" ></div>
 {% include footer.html %}
 
 

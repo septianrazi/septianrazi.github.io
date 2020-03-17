@@ -2,6 +2,10 @@
 @import 'brand.scss';
 // @import 'animate';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $color2;
   font-family: "Raleway", sans-serif;
@@ -31,10 +35,10 @@ body {
     h2  {
       color: $color1;
       font-weight: bold;
-      font-size: 2.3em;
+      font-size: 2.5em;
       font-family: Athiti, sans-serif;
       margin-bottom: 2%;
-      margin-top: 2%;
+      margin-top: 5%;
     
       }
     
@@ -210,13 +214,13 @@ main {
 
       width: 70%;
 
-      -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
-      transition: 0.3s;
+      // -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+      // transition: 0.3s;
 
-      &:hover{
-        background-color: #395e5e;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-      }
+      // &:hover{
+      //   background-color: #395e5e;
+      //   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      // }
     }
 
     // roles button
@@ -332,13 +336,25 @@ main {
         grid-area: img;
 
         img {
+          display: block;
+          margin: 0 auto;
           max-width: 100%;
+        }
+
+        iframe {
+          display: block;
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
         }
       }
 
       .modal-header {
         grid-area: title;
 
+        h2 {
+          font-size: 2em;
+        }
         h4 {
           margin-top: 0.3em;
           font-family: Raleway, sans-serif;
@@ -415,6 +431,7 @@ main {
     
     .masonry-item {
       float: left;
+      background-color: black;
       margin-bottom: 20px;
       border-radius: 5px 5px 5px 5px;
       box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.55);
@@ -427,6 +444,7 @@ main {
 
       img {
         display: block;
+        margin: 0 auto;
         max-width: 100%;
         border-radius: 5px 5px 0px 0px;
       }
@@ -434,13 +452,13 @@ main {
       .masonryDescription {
         background-color: $color1;
         border-radius: 0px 0px 5px 5px;
-        padding: 0.5em;
+        padding: 0.8em;
 
         h4 {
           color: $color2;
           font-size: 1.3em;
           font-weight: 0.1em;
-          margin-bottom: 0.3em;
+          margin-bottom: 0.5em;
         }
 
         p {
@@ -526,6 +544,8 @@ main {
   section.contact{
     grid-area: 5;
 
+
+
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-columns: repeat(2, auto);
@@ -549,13 +569,16 @@ main {
       /* padding: 14px 16px; */
       text-decoration: none;
       display: inline;
-      margin-left: 10%;
-      margin-right: 10%;
+      margin-left: 15%;
+      margin-right: 15%;
     }
   
     .socialMediaLinks img {
       width: 30%;
       transition-duration: 0.5s;
+
+      padding-top: 10%;
+      padding-bottom: 10%;
 
       // &:hover {
       //   width: 32%
