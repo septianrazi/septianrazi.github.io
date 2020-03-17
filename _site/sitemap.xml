@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/authors/jill.html</loc>
-<lastmod>2020-03-17T20:37:55+11:00</lastmod>
+<lastmod>2020-03-17T20:46:35+11:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/authors/ted.html</loc>
-<lastmod>2020-03-17T20:37:55+11:00</lastmod>
+<lastmod>2020-03-17T20:46:35+11:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2018/08/20/bananans.html</loc>
@@ -36,12 +36,8 @@
 <loc>http://localhost:4000/staff.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/assets/CV_Complete_03Sep2019.pdf</loc>
-<lastmod>2019-09-02T15:52:19+10:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/assets/CV_Complete_29Dec2019.pdf</loc>
-<lastmod>2020-02-06T21:22:09+11:00</lastmod>
+<loc>http://localhost:4000/assets/CV_Complete_17Mar2020_ONLINE.pdf</loc>
+<lastmod>2020-03-17T20:45:17+11:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/images/Septian%20Razi.html</loc>
