@@ -65,7 +65,7 @@ main section.bio { grid-area: 2; display: grid; grid-template-columns: repeat(3,
 
 main section.bio h2 { grid-area: heading; }
 
-main section.bio .role1, main section.bio .role2, main section.bio .role3 { font-size: 1.5em; font-family: Raleway, sans-serif; text-align: center; text-decoration: none; background-color: darkslategray; color: white; border: none; padding: 15px; border-radius: 10px; width: 70%; }
+main section.bio .role3, main section.bio .role2, main section.bio .role1 { font-size: 1.5em; font-family: Raleway, sans-serif; display: flex; justify-content: center; align-items: center; text-align: center; text-decoration: none; background-color: darkslategray; color: white; border: none; padding: 15px; border-radius: 10px; width: 80%; }
 
 main section.bio .role1 { grid-area: role1; }
 

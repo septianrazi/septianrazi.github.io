@@ -203,7 +203,12 @@ main {
       font-size: 1.5em;
       font-family: $body-text;
       
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       text-align: center;
+ 
       text-decoration: none;
       background-color:  $color1; 
       color:  $color2;
@@ -212,7 +217,7 @@ main {
       padding: 15px;
       border-radius: 10px;
 
-      width: 70%;
+      width: 80%;
 
       // -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
       // transition: 0.3s;
