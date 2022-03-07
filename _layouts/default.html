@@ -1,46 +1,35 @@
-<!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Septian Razi">
-    <meta name="description" content="Personal Website of Septian Razi, an up and coming Data Scientist, Web Developer from ANU">
-    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">  
-    {% if page.css %}
-      {% for stylesheet in page.css %}
-      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
-      {% endfor %}
-    {% endif %}
+<!DOCTYPE html>
+<html lang="en">
 
-    
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <!-- <script src="assets/js/p5.dom.js"></script>
-    <script src="assets/js/p5.sound.js"></script> -->
-    <script src="assets/js/p5.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }} - Pacific Asia Conference on Knowledge Discovery and Data Mining</title>
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <title>{{page.title}}</title>
-  
-    <script src="assets/js/mainPage.js" defer></script>
+	<link rel='stylesheet' id='main-stylesheet' href='/assets/css/styles.css' type='text/css'
+		media='all' />
 
-    <!-- Entrance JS animations (https://github.com/michalsnik/aos) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Favicons -->
 
-    
-    <!-- Main JS -->
-  </head>
-  <body>
-    {{ content }}
+</head>
 
-    <!-- Entrance JS animations (https://github.com/michalsnik/aos) -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+<body class="bg-gradient">
+
+	<!-- CONTENT -->
+
+	<div class="container" id="container-content">
+
+		{{ content }}
+
+	</div>
+
+
+
+
+
+
+	<!-- Scripts -->
+</body>
+
 </html>
