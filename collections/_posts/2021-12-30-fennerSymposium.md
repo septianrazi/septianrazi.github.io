@@ -2,7 +2,7 @@
 title: Fenner Survey Analytics 
 description: Fenner Hall Symposium, ANU 
 id: fennerSymposium
-imgURL: assets/images/fennerSymposium.PNG 
+imgURL: assets/images/fennerSymposium.png 
 year: 2019
 
 stack: Python, Jupyter Notebook, Pandas, Scikit-learn, Excel, R, Rattle

@@ -2,7 +2,7 @@
 title: Loading-Icons.p5 
 description: Written in p5 and Javascript 
 id: loadingIconP5
-imgURL: assets/images/loadingIcon.PNG 
+imgURL: assets/images/loadingIcon.png 
 year: 2019 - Ongoing
 
 stack: JavaScript, p5.js

@@ -2,7 +2,7 @@
 title: Software Engineer
 description: CSIRO's Data61
 id: CSIROSoftEng
-imgURL: assets/images/logos_icons/data61.png 
+imgURL: assets/images/logosIcons/data61.png 
 year: 2022
 
 # modalImgURL: assets/images/theLabRaziPAX.jpg

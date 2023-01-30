@@ -2,7 +2,7 @@
 title: Mentor
 description: The Lab, Marymead
 id: theLabMentor
-imgURL: assets/images/logos_icons/theLab.jpg 
+imgURL: assets/images/logosIcons/theLab.jpg 
 year: 2020 - Ongoing
 
 modalImgURL: assets/images/theLabRaziPAX.jpg

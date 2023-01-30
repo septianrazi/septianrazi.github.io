@@ -2,7 +2,7 @@
 title: SII Website
 description: ANU Software Innovation Institute
 id: siiWebsite
-imgURL: assets/images/siiWebsite.PNG 
+imgURL: assets/images/siiWebsite.png 
 modalImgURL: assets/images/DemoGifs/siiWebsite.gif
 year: 2021
 findOutMoreURL: https://sii.anu.edu.au/
