@@ -1,8 +1,6 @@
 ---
 ---
 
-@use "sass:color";
-
 $light_blue: #00b0cf;
 $light_green: #06945b;
 $muted_blue: #b9dce2;
@@ -136,5 +134,5 @@ body {
 h1, h2 {
  font-family: $title-text;
  font-weight: bold;
- color: color.adjust(map-get($theme-colors, "primary"), $saturation: -15%);
+ color: #172020;
 }
