@@ -1,0 +1,23 @@
+<!-- Card for {{ image.title }} -->
+<div class="card h-100 my-1 text-decoration-none text-dark shadow-lg border-0 rounded hover-shadow bg-gradient"
+    style="width: 100%;">
+    <a href="{{ include.link }}" class="ratio ratio-1x1">
+
+        {% if  include.image_link == nil %}
+            {% assign image_link = "/assets/images/default_profile.png" %}
+        {% else %}
+            {% assign image_link =  include.image_link  %}
+        {% endif %}
+
+        <img src="{{ image_link }}" class="card-img-top img-fluid " alt="{{ include.name }} image"
+        style="object-fit: cover; opacity: 0.9;">
+        
+    </a>
+    <div class="card-body bg-light rounded-bottom">
+        <h4 class="card-title"> <b>{{ include.name }}</b></h4>
+        <p class="card-text">
+            {{ include.content }}
+        </p>
+
+    </div>
+</div>

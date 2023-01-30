@@ -1,0 +1,124 @@
+<!-- Card for {{ image.title }} -->
+<div
+  class="card h-100 my-1 text-decoration-none text-dark shadow-lg bg-gradient border-0 hover-shadow rounded-lg neumorphic neumorphic-hover"
+  style="width: 100%;" data-bs-toggle="modal" data-bs-target="#{{ include.id }}">
+  <div class="ratio ratio-16x9">
+    <img src="{{ include.imgURL }}" class="card-img-top img-fluid " alt="{{ include.title }} image"
+      style="object-fit: cover; opacity: 0.9;">
+  </div>
+  <div class="card-body bg-gradient">
+    <h4 class="card-title text-light">{{ include.title }}</h4>
+    <p class="card-text text-light">
+      {{ include.description }}
+    </p>
+
+
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="{{ include.id }}" tabindex="-1" aria-labelledby="{{ include.id }}Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" style=" max-width: 80%;">
+    <div class="row gx-0">
+      <div class="col overflow-hidden d-flex justify-content-center">
+        <div class=" modal-content modal-image ratio ratio-16x9">
+          {% if include.modalImgURL %}
+          <img src="{{ include.modalImgURL }}" class="object-fit-cover rounded" />
+          {% elsif include.video %}
+          <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen class="rounded"></iframe>
+          {% else %}
+          <img src="{{ include.imgURL }}" class="object-fit-cover rounded" />
+          {% endif %}
+
+
+        </div>
+      </div>
+      <div class="col d-flex flex-column py-5">
+        <div class="modal-content glass-opaque ms-n5">
+
+          <div class="modal-header">
+            <h2 class="modal-title" id="{{ include.id }}Label">{{include.title}}</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+          <div class="modal-body mw-100">
+            <h3>{{include.description}}</h3>
+            <h4>{{include.year}}</h4>
+            {{ include.content }}
+            <br>
+            <p class="fs-7 fw-light text-secondary fst-italic ">{{include.stack}}</p>
+          </div>
+          <div class="modal-footer">
+            <p><a href="{{include.findOutMoreURL}}" target=_blank
+                class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out more</a></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- <div class="modal-content">
+    <div class= "modal-image">
+      {% if include.modalImgURL %} 
+        <img src = "{{ include.modalImgURL }}"/>
+      {% elsif include.video %} 
+        <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen></iframe>
+      {% else %}
+        <img src = "{{ include.imgURL }}"/>
+      {% endif %}  -->
+
+
+<!-- </div>
+      <div class="modal-header">
+        <div class="close">&times;</div>
+        <h2>{{include.title}}</h2>
+        <h3>{{include.description}}</h3>
+        <h4>{{include.year}}</h4>
+      </div>
+      <div class="modal-body">
+        <p>{{include.text}}</p>
+        <br>
+        <p class = "stack">{{include.stack}}</p>
+      </div>
+      <div class="modal-footer">
+        <p><a href = "{{include.sourceURL}}" target = _blank>Find out more</a></p>
+      </div>
+    </div> -->
+
+
+
+<!-- The Modal -->
+<div id={{ include.id }} class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-image">
+      {% if include.modalImgURL %}
+      <img src="{{ include.modalImgURL }}" />
+      {% elsif include.video %}
+      <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen></iframe>
+      {% else %}
+      <img src="{{ include.imgURL }}" />
+      {% endif %}
+
+
+    </div>
+    <div class="modal-header">
+      <div class="close">&times;</div>
+      <h2>{{include.title}}</h2>
+      <h3>{{include.description}}</h3>
+      <h4>{{include.year}}</h4>
+    </div>
+    <div class="modal-body">
+      <p>{{include.text}}</p>
+      <br>
+      <p class="stack">{{include.stack}}</p>
+    </div>
+    <div class="modal-footer">
+      <p><a href="{{include.sourceURL}}" target=_blank>Find out more</a></p>
+    </div>
+  </div>
+</div>

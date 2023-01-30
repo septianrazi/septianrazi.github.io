@@ -1,0 +1,42 @@
+<!-- Imaage Card for {{ image.title }} -->
+
+
+<!-- <div
+  class="text-decoration-none text-dark shadow-lg bg-gradient rounded-lg neumorphic neumorphic-hover"
+  style="width: 100%;">
+  <div class="ratio ratio-16x9">
+    <img src="{{ include.imgURL }}" class="card-img-top img-fluid " alt="{{ include.title }} image"
+      style="object-fit: cover; opacity: 0.7;">
+  </div>
+</div> -->
+
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade neumorphic neumorphic-hover overflow-hidden bg-gradient " style="height: 95%;"
+  data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner justify-content-center">
+    <div class="carousel-item min-vh-100 active">
+      <img src="{{ include.imgURL }}" class="d-block vh-100 w-100 object-fit-cover" alt="..." style=" opacity: 0.8;">
+    </div>
+    <div class="carousel-item min-vh-100">
+      <img src="assets\images\3ai_website.PNG" class="d-block vh-100 w-100 object-fit-cover" alt="..." style=" opacity: 0.8;">
+    </div>
+    <div class="carousel-item min-vh-100">
+      <img src="assets\images\anu.PNG" class="d-block vh-100 w-100 object-fit-cover" alt="..." style=" opacity: 0.8;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

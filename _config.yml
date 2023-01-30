@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: septianrazi
-github_username:  raziseptian
+github_username:  septianrazi
 
 # Build settings
 # theme: minima
@@ -56,3 +56,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections_dir: collections
+
+collections:
+  work:
+  posts:
