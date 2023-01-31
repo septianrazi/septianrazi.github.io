@@ -2,7 +2,7 @@
 title: XR Pointclouds
 description: Australian Plant Phenomics Facility at ANU
 id: XRPointclouds
-imgURL: assets/images/XRPointclouds.PNG 
+imgURL: assets/images/xrPointclouds.png
 year: 2021
 
 stack: C#, Unity, Mixed Reality Toolkit, Python, Jupyter Notebook, Firebase, Git, HoloLens 2
