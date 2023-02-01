@@ -14,10 +14,8 @@ stack: C#, Unity, Microsoft Mixed Reality Toolkit, Git, Confluence
 
 
 --- 
-•	Contributed to high profile Virtual Reality safety training project, implementing numerous features and user interface elements for application
-
-•	Assisted in developing and running user studies for an Extended Reality agricultural data visualisation prototype involving novel interaction techniques.
-
-•	Regular correspondence with clients, potential users, 3D artists and other stakeholders to ensure requirements and software is fit for purpose
+- Contributed to high profile Virtual Reality safety training project, implementing numerous features and user interface elements for application
+- Assisted in developing and running user studies for an Extended Reality agricultural data visualisation prototype involving novel interaction techniques.
+- Regular correspondence with clients, potential users, 3D artists and other stakeholders to ensure requirements and software is fit for purpose
 
 
