@@ -73,8 +73,9 @@ body {
     width: 99vw;
     height: 100vh;
 
+    overflow: hidden;
+
     scroll-snap-align: start;
-  
   }
 }
 
