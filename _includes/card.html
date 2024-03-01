@@ -1,18 +1,16 @@
 <!-- Card for {{ image.title }} -->
 <div
-  class="card h-100 my-1 text-decoration-none text-dark shadow-lg bg-gradient border-0 rounded-lg neumorphic neumorphic-hover"
- data-bs-toggle="modal" data-bs-target="#{{ include.id }}">
+  class="card my-1 text-decoration-none text-dark shadow-lg bg-gradient border-0 rounded-lg neumorphic neumorphic-hover"
+  data-bs-toggle="modal" data-bs-target="#{{ include.id }}">
   <div class="ratio ratio-16x9">
     <img src="{{ include.imgURL }}" class="card-img-top img-fluid " alt="{{ include.title }} image"
       style="object-fit: cover; opacity: 0.8;">
   </div>
-  <div class="card-body bg-gradient">
-    <h5 class="card-title text-light">{{ include.title }}</h5>
-    <p class="card-text text-light">
+  <div class="card-body bg-gradient card-body-height">
+    <h5 class="card-title text-light fw-bold">{{ include.title }}</h5>
+    <p class="card-text text-light overflow-hidden">
       {{ include.description }}
     </p>
-
-
 
   </div>
 </div>
@@ -26,12 +24,13 @@
           {% if include.modalImgURL %}
           <img src="{{ include.modalImgURL }}" class="object-fit-cover rounded" />
           {% elsif include.video %}
-          <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen class="rounded"></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen
+            class="rounded"></iframe>
           {% else %}
           <img src="{{ include.imgURL }}" class="object-fit-cover rounded" />
           {% endif %}
         </div>
-        
+
       </div>
       <div class="col d-flex flex-column py-5 ">
         <div class="modal-content glass-opaque ms-n5 neumorphic">
@@ -52,7 +51,8 @@
           </div>
           <div class="modal-footer">
             <p><a href="{{include.findOutMoreURL}}" target=_blank
-                class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out more</a></p>
+                class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out more</a>
+            </p>
           </div>
         </div>
       </div>

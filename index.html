@@ -15,9 +15,12 @@ layout: default
             <div class="col-md-5 align-self-center px-5">
                 <h1>Hi, I'm Razi</h1>
                 <p>
-                    Software Engineer and Web Developer based in Canberra, Australia. Big on Extended Reality and
-                    Front-End
-                    Devlopment.
+                    Software Engineer currently traveling the world pursuing an International Masters in Extended
+                    Reality. Currently based in Saint-Etienne, France.
+                </p>
+
+                <p>
+                    Open to new opportunities and collaborations.
                 </p>
                 <p>
                     Hate websites?
@@ -31,10 +34,10 @@ layout: default
 </section>
 
 <section class="full-page-section p-5">
-    <div class="container-fluid ps-5">
+    <div class="container-fluid">
         <h1 id="about">About Me</h1>
         <div class="row gx-0 align-items-center py-5">
-            <div class="col-md-6 ">
+            <div class="col-md-6">
                 <div class="ratio ratio-4x3 z-0">
                     <img src="assets\images\cameraAway.jpg" alt="razi_selfie_hololens"
                         class="neumorphic neumorphic-hover object-fit-cover w-100 z-0" style="rotate: 3deg">
@@ -42,20 +45,24 @@ layout: default
             </div>
 
             <div class="col-md-6 align-self-end">
-                <div class="neumorphic glass-primary text-light ms-n5 mt-n5 glass">
+                <div class="neumorphic glass-primary text-light ms-n5 mt-n5 glass about-me-blurb">
                     <div class="p-5">
                         <p>
-                            I'm a software engineer and a web developer, but my passion really lies in one thing really;
+                            I'm a software engineer with a keen eye on user experience and immersion, but my passion
+                            really lies in one thing really;
                             making computing easy and look nice.
-                            My medium of choice is XR and websites to accomplish this.
+                            <!-- My medium of choice is XR and websites to accomplish this. -->
 
                         </p>
 
                         <p>
-                            On the XR side, I've had the opportunity to work in many different projects, particularly
-                            within the context of Immersive Analytics and Data visualisation. On the front-end side,
-                            I've got extensive experience in designing and developing websites. Peculiar combo, but I
-                            argue they are complementary - both focus on engagement and interaction.
+                            I've had the opportunity to work in many different projects, particularly
+                            within the context of Immersive Analytics and Data visualisation, especially using new
+                            Immersive Technnologies such as AR and VR.
+                            I also have extensive experience in designing and developing websites.
+
+                            <!-- Peculiar combo, but I
+                            argue they are complementary - both focus on engagement and interaction. -->
 
                         </p>
 
@@ -64,57 +71,21 @@ layout: default
                     </div>
                 </div>
 
-                <div class="neumorphic ms-n4 mt-n5 glass z-3 position-relative"
-                    style="width: 70%; left: 0%; rotate: deg">
+                <div class="neumorphic ms-n4 mt-n5 glass z-3 position-relative skills">
                     <div class="p-5">
                         <h4>Skills</h4>
                         <div class="d-flex flex-row flex-wrap">
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">HTML
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">CSS
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                JavaScript</div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Bootstrap
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Sass
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Jekyll
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Flutter</div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                p5.JS</div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Firebase</div>
 
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Unity
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">C#
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Python
-                            </div>
-
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Java
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Git
-                            </div>
+                            {% for skill in site.data.skills %}
                             <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Project Management
+                                {{ skill }}
                             </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">Agile
-                            </div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Beatboxing</div>
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                Minecraft</div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="full-page-section p-5 container-fluid" id="work">
@@ -123,7 +94,7 @@ layout: default
             <h1 class="col" id="roles">Roles and Experience</h1>
         </div>
 
-        <div class="row row-cols-md-4 g-5 py-3">
+        <div class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
 
             {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'role'" %}
             {% for work in filtered_posts %}
@@ -186,7 +157,8 @@ layout: default
                 <h1 class="col" id="projects">Projects</h1>
             </div>
 
-            <div class="row row-cols-md-4 g-5 py-3">
+            <div class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
+
 
                 {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'project'" %}
                 {% for work in filtered_posts %}
@@ -245,32 +217,34 @@ layout: default
     <div class="container-fluid">
         <div class="row gx-0 align-items-center">
             <div class="col-md-6">
-                <div class="ps-5">
-                    <h1 id="contact">Contact</h1>
+                <h1 id="contact">Contact</h1>
+
+                <!-- <div class="ps-5"> -->
+                <div>
                     <div style="background: hsla(0, 0%, 100%, 0.55);
                     backdrop-filter: blur(30px);" class="card rounded-7 me-lg-n5 z-1 neumorphic neumorphic-hover">
-                        <div class="card-body p-lg-5 shadow-5">
+                        <div class=" card-body p-lg-5 shadow-5 overflow-scroll" style="max-height: 60vh;">
                             <form>
                                 <!-- Name input -->
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mb-3">
                                     <input type="text" id="form4Example1" class="form-control" />
                                     <label class="form-label" for="form4Example1">Name</label>
                                 </div>
 
                                 <!-- Email input -->
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mb-3">
                                     <input type="email" id="form4Example2" class="form-control" />
                                     <label class="form-label" for="form4Example2">Email address</label>
                                 </div>
 
                                 <!-- Message input -->
-                                <div class="form-outline mb-4">
-                                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                                <div class="form-outline mb-3">
+                                    <textarea class="form-control" id="form4Example3" rows="3"></textarea>
                                     <label class="form-label" for="form4Example3">Message</label>
                                 </div>
 
                                 <!-- Checkbox -->
-                                <div class="form-check d-flex justify-content-center mb-4">
+                                <div class="form-check d-flex justify-content-center mb-3">
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4"
                                         checked />
                                     <label class="form-check-label" for="form4Example4">
@@ -289,15 +263,20 @@ layout: default
                             Or stalk me here
                         </h3>
                         <div class='row py-3'>
-                            <div class="col-1" id="linkedin"><a href="https://www.linkedin.com/in/septianrazi/"><img
-                                        src="assets/images/logosIcons/linkedin.png" class="w-100"></a></div>
-                            <div class="col-1" id="github"><a href="https://www.github.com/septianrazi/"><img
-                                        src="assets/images/logosIcons/github.png" class="w-100"></a></div>
-                            <div class="col-1" id="email"><a
+                            <div class="col-2" id="linkedin"><a href="https://www.linkedin.com/in/septianrazi/"><img
+                                        src="assets/images/logosIcons/linkedin.png" class="w-100"
+                                        style="max-width: 40px;"></a></div>
+                            <div class="col-2" id="github"><a href="https://www.github.com/septianrazi/"><img
+                                        src="assets/images/logosIcons/github.png" class="w-100"
+                                        style="max-width: 40px;"></a></div>
+                            <div class="col-2" id="email"><a
                                     href="mailto:septian.razi@gmail.com?subject=Found%20your%20Website!%20"><img
-                                        src="assets/images/logosIcons/email.png" class="w-100"></a></div>
-                            <div class="col-1" id="instagram"><a href="https://www.instagram.com/septianrazi/"><img
-                                        src="assets/images/logosIcons/instagram.png" class="w-100"></a></div>
+                                        src="assets/images/logosIcons/email.png" class="w-100"
+                                        style="max-width: 40px;"></a>
+                            </div>
+                            <div class="col-2" id="instagram"><a href="https://www.instagram.com/septianrazi/"><img
+                                        src="assets/images/logosIcons/instagram.png" class="w-100"
+                                        style="max-width: 40px;"></a></div>
                         </div>
                     </div>
                 </div>
@@ -306,20 +285,19 @@ layout: default
 
 
 
-            <div class="col-md-5 ">
+            <div class="col-md-5 d-none d-md-block">
 
                 <div class="ratio ratio-1x1 z-0">
+
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6905146.282269784!2d144.87140061237176!3d-32.32116264864934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d69b05c9021%3A0x500ea6ea7695660!2sCanberra%20ACT%202601!5e0!3m2!1sen!2sau!4v1674541092320!5m2!1sen!2sau"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89586.2401607847!2d4.336766499448023!3d45.43816864753188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5abff0dcfe415%3A0x631b2db87635756!2sSaint-%C3%89tienne%2C%20France!5e0!3m2!1sen!2sfi!4v1709330184990!5m2!1sen!2sfi"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         class="neumorphic neumorphic-hover"></iframe>
 
                 </div>
-
-
             </div>
 
-            <div class="col-md-1 align-self-start ">
+            <div class="col-md-1 align-self-start d-none d-md-block ">
                 <div class="pt-5 pe-5">
                     <div class=" ms-n5 z-3">
                         <img src="assets\images\razi_selfie_hololens.jpg" alt="razi_selfie_hololens"

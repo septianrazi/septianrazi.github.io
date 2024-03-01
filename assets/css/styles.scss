@@ -24,11 +24,11 @@ $theme-colors: (
   "warning": $background-white,
   "dark": $black,
   "light": $white,
-  "info": $brighter_slate_gray,
+  "info": $brighter_slate_gray
 );
 
 $gradient: linear-gradient(145deg, hsla(180, 26%, 39%, 1) 0%, hsla(180, 25%, 25%, 1) 100%);
-$gradient-glass: linear-gradient(145deg, hsla(180, 26%, 39%, 0.80) 0%, hsla(180, 25%, 25%, 0.80) 100%);
+$gradient-glass: linear-gradient(145deg, hsla(180, 26%, 39%, 0.8) 0%, hsla(180, 25%, 25%, 0.8) 100%);
 
 $enable-negative-margins: true;
 
@@ -51,31 +51,83 @@ $body-text: Raleway, sans-serif;
   src: url("../fonts/Raleway/Raleway-Medium.ttf");
 }
 
-// Google Font Import
-body {
-  font-family: $body-text;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+// medium screen
+@media (min-width: 600px) {
+  body {
+    font-family: $body-text;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .full-page-parent {
+    width: 100%;
+    height: 100%;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 99vw;
+      height: 100vh;
+
+      overflow: hidden;
+
+      scroll-snap-align: start;
+    }
+
+    .section-cards {
+      height: 90vh;
+    }
+  }
+
+  .about-me-blurb {
+    font-size: 0.8rem;
+  }
+
+  .skills {
+    width: 100%;
+    left: 0%;
+    rotate: deg;
+  }
+
+  .card-body-height {
+    height: 18vh;
+  }
+
+  .card-body-height {
+    h5 {
+      font-size: 1.1em;
+    }
+    p {
+      font-size: 0.8em;
+    }
+  }
 }
 
-.full-page-parent {
-  width: 100%;
-  height: 100%;
+// big screen
+@media (min-width: 1200px) {
+  .skills {
+    width: 80%;
+    left: 0%;
+    rotate: deg;
+  }
 
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  .about-me-blurb {
+    font-size: 1rem;
+  }
 
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 99vw;
-    height: 100vh;
-
-    overflow: hidden;
-
-    scroll-snap-align: start;
+  .card-body-height {
+    height: 15vh;
+    h5 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -86,14 +138,18 @@ body {
 .neumorphic {
   border-radius: 20px !important;
   border-radius: 20px !important;
-  box-shadow: 7px 7px 21px #a8a8a882, -7px -7px 21px #ffffff82 !important;
+  box-shadow:
+    7px 7px 21px #a8a8a882,
+    -7px -7px 21px #ffffff82 !important;
   transition-duration: 0.3s;
   overflow: hidden;
 }
 
 .neumorphic-hover {
   &:hover {
-    box-shadow: 15px 15px 30px #a8a8a8b2, -15px -15px 30px #ffffffb2 !important;
+    box-shadow:
+      15px 15px 30px #a8a8a8b2,
+      -15px -15px 30px #ffffffb2 !important;
 
     border-radius: 17px !important;
   }
@@ -112,7 +168,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(142, 146, 152, 0.575);
+  background: rgba(142, 146, 152, 0.275);
   border-radius: 10px;
 }
 
@@ -131,9 +187,9 @@ body {
   backdrop-filter: blur(20px);
 }
 
-
-h1, h2 {
- font-family: $title-text;
- font-weight: bold;
- color: #172727;
+h1,
+h2 {
+  font-family: $title-text;
+  font-weight: bold;
+  color: #172727;
 }
