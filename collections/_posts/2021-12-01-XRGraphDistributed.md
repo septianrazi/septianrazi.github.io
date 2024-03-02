@@ -6,7 +6,7 @@ imgURL: assets/images/DistributedXRGraphs.jpg
 year: 2021
 
 stack: C#, Unity, Mixed Reality Toolkit, Python, Mathematica, Jupyter Notebook, Firebase, Mendeley, LaTex, Git
-video: HdTGUFWILqk 
+video: Z7vJ7QcyWZU 
 findOutMoreURL: https://ieeexplore.ieee.org/document/9757505
 githubURL: https://github.com/septianrazi/Python-Immersive-Graphing
 show: true
@@ -23,7 +23,3 @@ category: project
   We had performed several expert user tests in a completely virtual manner through video conferencing. Our XR application is designed to supplement graph exploration tasks in this distributed setting.
 
   We compiled our findings into a paper for IEEE VR 2022, which was accepted as a poster.
-
-  IEEE VR 2022 paper:
-
-  [S. Razi, H. Gardner, A. Sorensen and M. Adcock, "A Live-Coded Add-On System for Video Conferencing in Virtual Reality," 2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), Christchurch, New Zealand, 2022, pp. 692-693, doi: 10.1109/VRW55335.2022.00197.](https://ieeexplore.ieee.org/document/9757505)

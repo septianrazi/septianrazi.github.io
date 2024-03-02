@@ -3,7 +3,7 @@ title: Mentor
 description: The Lab, Marymead
 id: theLabMentor
 imgURL: assets/images/logosIcons/theLab.jpg 
-year: 2020 - Ongoing
+year: 2020 - 2023
 
 modalImgURL: assets/images/theLabRaziPAX.jpg
 findOutMoreURL: https://www.marymead.org.au/lab/

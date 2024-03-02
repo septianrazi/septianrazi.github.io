@@ -52,6 +52,13 @@
               <p class="fs-7 fw-light text-secondary fst-italic ">{{include.stack}}</p>
             </div>
             <div class="modal-footer">
+              {% if include.githubURL %}
+              <div
+                class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 d-flex justify-content-center"
+                id="github"><a href=" {{ include.githubURL }}" target=_blank><img
+                    src="assets/images/logosIcons/github.png" class="w-100"
+                    style="max-width: 20px; filter: invert(1);"></a></div>
+              {% endif %}
               <p><a href="{{include.findOutMoreURL}}" target=_blank
                   class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out
                   more</a>
@@ -66,7 +73,7 @@
 
     </div>
 
-
+    <!-- small screen modal -->
     <div class="d-block d-md-none">
       <div class="d-flex flex-column gx-0">
         <div class="d-flex align-items-center justify-content-center">
@@ -100,102 +107,23 @@
               <p class="fs-7 fw-light text-secondary fst-italic " style="font-size: 0.7em;">{{include.stack}}</p>
             </div>
             <div class="modal-footer">
+              {% if include.githubURL %}
+              <div
+                class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 d-flex justify-content-center"
+                id="github"><a href=" {{ include.githubURL }}" target=_blank><img
+                    src="assets/images/logosIcons/github.png" class="w-100"
+                    style="max-width: 20px; filter: invert(1);"></a></div>
+              {% endif %}
               <p><a href="{{include.findOutMoreURL}}" target=_blank
                   class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out
                   more</a>
               </p>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- small screen modal -->
-    <!-- <div class="d-block d-md-block">
-      <div class="row gx-0">
-        <div class="col d-flex align-items-center justify-content-center">
-          <div class="modal-content modal-image ratio ratio-16x9">
-            {% if include.modalImgURL %}
-            <img src="{{ include.modalImgURL }}" class="object-fit-cover rounded" />
-            {% elsif include.video %}
-            <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen
-              class="rounded"></iframe>
-            {% else %}
-            <img src="{{ include.imgURL }}" class="object-fit-cover rounded" />
-            {% endif %}
-          </div>
 
-        </div>
-        <div class="col d-flex flex-column py-5 ">
-          <div class="modal-content glass-opaque ms-n5 neumorphic">
-
-            <div class="modal-header">
-              <h2 class="modal-title" id="{{ include.id }}Label">{{include.title}}</h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-            </div>
-            <div class="modal-body mw-100">
-              <h3>{{include.description}}</h3>
-              <h4>{{include.year}}</h4>
-              <p>
-                {{ include.content }}
-              </p>
-              <br>
-              <p class="fs-7 fw-light text-secondary fst-italic ">{{include.stack}}</p>
-            </div>
-            <div class="modal-footer">
-              <p><a href="{{include.findOutMoreURL}}" target=_blank
-                  class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out
-                  more</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div> -->
-
-
-
-    <!-- small screen modal -->
-
-    <!-- <div class="d-flex flex-column d-md-none">
-      <div class="modal-image ratio ratio-16x9">
-        {% if include.modalImgURL %}
-        <img src="{{ include.modalImgURL }}" class="object-fit-cover rounded" />
-        {% elsif include.video %}
-        <iframe src="https://www.youtube.com/embed/{{ include.video }}" frameborder="0" allowfullscreen
-          class="rounded"></iframe>
-        {% else %}
-        <img src="{{ include.imgURL }}" class="object-fit-cover rounded" />
-        {% endif %}
-      </div>
-
-      <div class="modal-content glass-opaque mt-n3 neumorphic">
-        <div class="modal-header">
-          <h2 class="modal-title" id="{{ include.id }}Label">{{include.title}}</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-        </div>
-        <div class="modal-body mw-100">
-          <h3>{{include.description}}</h3>
-          <h4>{{include.year}}</h4>
-
-          <div style='font-size: 0.8rem;'>
-            <p>
-              {{ include.content }}
-            </p>
-          </div>
-
-          <br>
-          <p class="fs-7 fw-light text-secondary fst-italic" style='font-size: 0.7rem;'>{{include.stack}}</p>
-        </div>
-        <div class="modal-footer">
-          <p><a href="{{include.findOutMoreURL}}" target=_blank
-              class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Find out more</a>
-          </p>
-        </div>
-      </div>
-    </div> -->
   </div>
 </div>

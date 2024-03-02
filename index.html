@@ -224,29 +224,30 @@ layout: default
                     <div style="background: hsla(0, 0%, 100%, 0.55);
                     backdrop-filter: blur(30px);" class="card rounded-7 me-lg-n5 z-1 neumorphic neumorphic-hover">
                         <div class=" card-body p-lg-5 shadow-5 overflow-scroll" style="max-height: 60vh;">
-                            <form>
+                            <form action="https://formspree.io/f/mjvnrdkw" method="POST">
                                 <!-- Name input -->
                                 <div class="form-outline mb-3">
-                                    <input type="text" id="form4Example1" class="form-control" />
+                                    <input type="text" id="form4Example1" class="form-control" name="name" required />
                                     <label class="form-label" for="form4Example1">Name</label>
                                 </div>
 
                                 <!-- Email input -->
                                 <div class="form-outline mb-3">
-                                    <input type="email" id="form4Example2" class="form-control" />
+                                    <input type="email" id="form4Example2" class="form-control" name="email" required />
                                     <label class="form-label" for="form4Example2">Email address</label>
                                 </div>
 
                                 <!-- Message input -->
                                 <div class="form-outline mb-3">
-                                    <textarea class="form-control" id="form4Example3" rows="3"></textarea>
+                                    <textarea class="form-control" id="form4Example3" rows="3" name="message"
+                                        required></textarea>
                                     <label class="form-label" for="form4Example3">Message</label>
                                 </div>
 
                                 <!-- Checkbox -->
                                 <div class="form-check d-flex justify-content-center mb-3">
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4"
-                                        checked />
+                                        checked name="sendCopy" />
                                     <label class="form-check-label" for="form4Example4">
                                         Send me a copy of this message
                                     </label>
@@ -274,9 +275,6 @@ layout: default
                                         src="assets/images/logosIcons/email.png" class="w-100"
                                         style="max-width: 40px;"></a>
                             </div>
-                            <div class="col-2" id="instagram"><a href="https://www.instagram.com/septianrazi/"><img
-                                        src="assets/images/logosIcons/instagram.png" class="w-100"
-                                        style="max-width: 40px;"></a></div>
                         </div>
                     </div>
                 </div>
