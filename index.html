@@ -153,58 +153,223 @@ layout: default
 <section class="full-page-section p-5 container-fluid" id="projects">
     <div class="container-fluid">
         <div class="py-5">
-            <div class="row">
-                <h1 class="col" id="projects">Projects</h1>
-            </div>
+            <div class="row justify-content-start">
+                <div class="d-flex flex-row align-items-center justify-content-start">
+                    <h1 class="" id="projects">Projects</h1>
+                    <div class="btn-group ms-3" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label
+                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
+                            for="btnradio1">Highlights</label>
 
-            <div class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label
+                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
+                            for="btnradio2">XR</label>
 
-
-                {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'project'" %}
-                {% for work in filtered_posts %}
-
-                {% unless work.show and work.category %}
-                {% continue %}
-                {% endunless %}
-                <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
-
-                {% assign id = work.id %}
-                {% assign title = work.title %}
-                {% assign description = work.description %}
-                {% assign imgURL = work.imgURL %}
-                {% assign year = work.year %}
-                {% assign stack = work.stack %}
-                {% assign modalImgURL = work.modalImgURL %}
-                {% assign findOutMoreURL = work.findOutMoreURL %}
-                {% assign githubURL = work.githubURL %}
-                {% assign show = work.show %}
-                {% assign content = work.content %}
-                {% assign tags = work.tags %}
-                {% assign video = work.video %}
-
-                <div class="col">
-                    <!-- References the profile.html include -->
-                    {% include card.html
-                    id =id
-                    title = title
-                    description = description
-                    imgURL = imgURL
-                    year = year
-                    stack = stack
-                    modalImgURL = modalImgURL
-                    findOutMoreURL = findOutMoreURL
-                    githubURL = githubURL
-                    show = show
-                    content = content
-                    video = video
-                    %}
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label
+                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
+                            for="btnradio3">WebDev</label>
+                    </div>
                 </div>
 
-                {% endfor %}
-
-
-
             </div>
+
+            <div id="projectCards">
+                <!-- default project -->
+                <div id="projectsDefault" class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
+
+
+                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'project'" %}
+                    {% for work in filtered_posts %}
+
+                    {% unless work.show and work.category %}
+                    {% continue %}
+                    {% endunless %}
+                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
+
+                    {% assign id = work.id %}
+                    {% assign title = work.title %}
+                    {% assign description = work.description %}
+                    {% assign imgURL = work.imgURL %}
+                    {% assign year = work.year %}
+                    {% assign stack = work.stack %}
+                    {% assign modalImgURL = work.modalImgURL %}
+                    {% assign findOutMoreURL = work.findOutMoreURL %}
+                    {% assign githubURL = work.githubURL %}
+                    {% assign show = work.show %}
+                    {% assign content = work.content %}
+                    {% assign tags = work.tags %}
+                    {% assign video = work.video %}
+
+                    <div class="col">
+                        <!-- References the profile.html include -->
+                        {% include card.html
+                        id =id
+                        title = title
+                        description = description
+                        imgURL = imgURL
+                        year = year
+                        stack = stack
+                        modalImgURL = modalImgURL
+                        findOutMoreURL = findOutMoreURL
+                        githubURL = githubURL
+                        show = show
+                        content = content
+                        video = video
+                        %}
+                    </div>
+
+                    {% endfor %}
+
+
+
+                </div>
+
+                <!-- Web Projects -->
+                <div id="projectsWebDev" class="d-none row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
+
+
+                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'WebDev'" %}
+                    {% for work in filtered_posts %}
+
+                    {% unless work.category == 'project' %}
+                    {% continue %}
+                    {% endunless %}
+
+                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
+
+                    {% assign id = work.id %}
+                    {% assign title = work.title %}
+                    {% assign description = work.description %}
+                    {% assign imgURL = work.imgURL %}
+                    {% assign year = work.year %}
+                    {% assign stack = work.stack %}
+                    {% assign modalImgURL = work.modalImgURL %}
+                    {% assign findOutMoreURL = work.findOutMoreURL %}
+                    {% assign githubURL = work.githubURL %}
+                    {% assign show = work.show %}
+                    {% assign content = work.content %}
+                    {% assign tags = work.tags %}
+                    {% assign video = work.video %}
+
+                    <div class="col">
+                        <!-- References the profile.html include -->
+                        {% include card.html
+                        id =id
+                        title = title
+                        description = description
+                        imgURL = imgURL
+                        year = year
+                        stack = stack
+                        modalImgURL = modalImgURL
+                        findOutMoreURL = findOutMoreURL
+                        githubURL = githubURL
+                        show = show
+                        content = content
+                        video = video
+                        %}
+                    </div>
+
+                    {% endfor %}
+
+
+
+                </div>
+
+                <!-- XR Projects -->
+                <div id="projectsXR" class="d-none row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
+
+
+                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'XR'" %}
+                    {% for work in filtered_posts %}
+
+                    {% unless work.category == 'project' %}
+                    {% continue %}
+                    {% endunless %}
+
+                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
+
+                    {% assign id = work.id %}
+                    {% assign title = work.title %}
+                    {% assign description = work.description %}
+                    {% assign imgURL = work.imgURL %}
+                    {% assign year = work.year %}
+                    {% assign stack = work.stack %}
+                    {% assign modalImgURL = work.modalImgURL %}
+                    {% assign findOutMoreURL = work.findOutMoreURL %}
+                    {% assign githubURL = work.githubURL %}
+                    {% assign show = work.show %}
+                    {% assign content = work.content %}
+                    {% assign tags = work.tags %}
+                    {% assign video = work.video %}
+
+                    <div class="col">
+                        <!-- References the profile.html include -->
+                        {% include card.html
+                        id =id
+                        title = title
+                        description = description
+                        imgURL = imgURL
+                        year = year
+                        stack = stack
+                        modalImgURL = modalImgURL
+                        findOutMoreURL = findOutMoreURL
+                        githubURL = githubURL
+                        show = show
+                        content = content
+                        video = video
+                        %}
+                    </div>
+
+                    {% endfor %}
+
+
+
+                </div>
+            </div>
+
+
+            <script>
+                // Get references to the buttons and the parent div
+                var btnHighlights = document.querySelector('#btnradio1');
+                var btnXR = document.querySelector('#btnradio2');
+                var btnWebDev = document.querySelector('#btnradio3');
+                var parentDiv = document.querySelector('#projectCards');
+
+                // Get references to the divs
+                var divProjectsDefault = document.querySelector('#projectsDefault');
+                var divProjectsWebDev = document.querySelector('#projectsWebDev');
+                var divProjectsXR = document.querySelector('#projectsXR');
+
+                // Add click event listeners to the buttons
+                btnHighlights.addEventListener('click', function () {
+                    // Remove all child divs from the parent
+                    while (parentDiv.firstChild) {
+                        parentDiv.removeChild(parentDiv.firstChild);
+                    }
+                    // Add the corresponding div
+                    parentDiv.appendChild(divProjectsDefault);
+                    divProjectsDefault.classList.remove('d-none');
+                });
+
+                btnXR.addEventListener('click', function () {
+                    while (parentDiv.firstChild) {
+                        parentDiv.removeChild(parentDiv.firstChild);
+                    }
+                    parentDiv.appendChild(divProjectsXR);
+                    divProjectsXR.classList.remove('d-none');
+                });
+
+                btnWebDev.addEventListener('click', function () {
+                    while (parentDiv.firstChild) {
+                        parentDiv.removeChild(parentDiv.firstChild);
+                    }
+                    parentDiv.appendChild(divProjectsWebDev);
+                    divProjectsWebDev.classList.remove('d-none');
+                });
+            </script>
             <!-- <div class=" btn bg-gradient neumorphic neumorphic-hover text-light my-3 float-end">
                 See More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i>
             </div> -->

@@ -11,7 +11,7 @@ findOutMoreURL:  https://septianrazi.github.io/CornellBoxInThreeJS/
 show: false
 tags: project Edu SoftEng XR WebDev
 category: project
-stack: three.js html webxr
+stack: three.js, html, webxr
 
 
 --- 

@@ -11,7 +11,7 @@ findOutMoreURL:  https://septianrazi.github.io/ColourDensityVisInThreeJS/
 show: true
 tags: project Edu SoftEng XR WebDev
 category: project
-stack: three.js html webxr webGL-shaders
+stack: three.js, html, webxr, webGL-shaders
 
 
 --- 
