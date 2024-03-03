@@ -12208,6 +12208,13 @@ textarea.form-control-lg {
   font-family: Raleway;
   src: url("../fonts/Raleway/Raleway-Medium.ttf");
 }
+.navbar {
+  background: linear-gradient(145deg, hsl(180, 26%, 39%) 0%, hsl(180, 25%, 25%) 100%);
+}
+.navbar .nav-link {
+  color: #eaf3f5 !important;
+}
+
 @media (min-width: 600px) {
   body {
     font-family: Raleway, sans-serif;
@@ -12232,6 +12239,12 @@ textarea.form-control-lg {
   }
   .full-page-parent .section-cards {
     height: 90vh;
+  }
+  .navbar {
+    background: transparent;
+  }
+  .navbar .nav-link {
+    color: #2f4f4f !important;
   }
   .about-me-blurb {
     font-size: 0.8rem;
