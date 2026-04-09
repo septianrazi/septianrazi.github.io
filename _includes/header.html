@@ -1,9 +1,15 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid px-3 ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex align-items-center order-lg-last">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="nav-link h5 text-center active text-primary border-0 bg-transparent mb-0 p-0 px-2" id="bd-theme" type="button" aria-label="Toggle theme">
+                <i class="bi bi-sun-fill" style="font-size: 1.3rem;"></i>
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -22,8 +28,6 @@
                     <a class="nav-link h5 text-center active text-primary" href="#contact">Contact</a>
                 </li>
             </ul>
-
-
         </div>
     </div>
 </nav>

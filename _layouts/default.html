@@ -18,6 +18,27 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Septian Razi - Software Engineer & Adventurer. Currently building high-performance applications and traveling the world.">
+	<meta name="keywords" content="Septian Razi, Software Engineer, Web Development, Jekyll, Neumorphism, Adventure">
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:title" content="{{ page.title | default: site.title }}">
+	<meta property="og:description" content="Software Engineer & Adventurer. Explore my portfolio and projects.">
+	<meta property="og:image" content="{{ site.url }}/assets/images/logosIcons/logo.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="twitter:title" content="{{ page.title | default: site.title }}">
+	<meta property="twitter:description" content="Software Engineer & Adventurer. Explore my portfolio and projects.">
+	<meta property="twitter:image" content="{{ site.url }}/assets/images/logosIcons/logo.png">
+
+	<!-- Theme Logic -->
+	<script src="/assets/js/theme.js"></script>
+
 </head>
 
 <body>
@@ -41,9 +62,7 @@
 
 
 	<!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
