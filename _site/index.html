@@ -18,6 +18,27 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Septian Razi - Software Engineer & Adventurer. Currently building high-performance applications and traveling the world.">
+	<meta name="keywords" content="Septian Razi, Software Engineer, Web Development, Jekyll, Neumorphism, Adventure">
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://localhost:4000/">
+	<meta property="og:title" content="Septian Razi">
+	<meta property="og:description" content="Software Engineer & Adventurer. Explore my portfolio and projects.">
+	<meta property="og:image" content="http://localhost:4000/assets/images/logosIcons/logo.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://localhost:4000/">
+	<meta property="twitter:title" content="Septian Razi">
+	<meta property="twitter:description" content="Software Engineer & Adventurer. Explore my portfolio and projects.">
+	<meta property="twitter:image" content="http://localhost:4000/assets/images/logosIcons/logo.png">
+
+	<!-- Theme Logic -->
+	<script src="/assets/js/theme.js"></script>
+
 </head>
 
 <body>
@@ -25,10 +46,16 @@
 
 		<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
     <div class="container-fluid px-3 ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex align-items-center order-lg-last">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="nav-link h5 text-center active text-primary border-0 bg-transparent mb-0 p-0 px-2" id="bd-theme" type="button" aria-label="Toggle theme">
+                <i class="bi bi-sun-fill" style="font-size: 1.3rem;"></i>
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -47,14 +74,12 @@
                     <a class="nav-link h5 text-center active text-primary" href="#contact">Contact</a>
                 </li>
             </ul>
-
-
         </div>
     </div>
 </nav>
 
 		<!-- CONTENT -->
-		<section class="full-page-section mx-0 px-0">
+		<section class="full-page-section mx-0 px-0 fade-in">
     <div class="container-fluid  mx-0 px-0">
         <div class="row gx-0">
             <div class="col-md-7 vh-100 ">
@@ -142,14 +167,14 @@
     </div>
 </section>
 
-<section class="full-page-section p-5">
+<section class="full-page-section p-5 fade-in">
     <div class="container-fluid">
         <h1 id="about">About Me</h1>
         <div class="row gx-0 align-items-center py-5">
             <div class="col-md-6">
                 <div class="ratio ratio-4x3 z-0">
                     <img src="assets\images\cameraAway.jpg" alt="razi_selfie_hololens"
-                        class="neumorphic neumorphic-hover object-fit-cover w-100 z-0" style="rotate: 3deg">
+                        class="neumorphic neumorphic-hover object-fit-cover w-100 z-0" style="rotate: 3deg" loading="lazy">
                 </div>
             </div>
 
@@ -269,7 +294,7 @@
         </div>
 </section>
 
-<section class="full-page-section p-5 container-fluid" id="work">
+<section class="full-page-section p-5 container-fluid fade-in" id="work">
     <div class="container-fluid py-5">
         <div class="row">
             <h1 class="col" id="roles">Roles and Experience</h1>
@@ -1441,7 +1466,7 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
 
 </section>
 
-<section class="full-page-section p-5 container-fluid" id="projects">
+<section class="full-page-section p-5 container-fluid fade-in" id="projects">
     <div class="container-fluid">
         <div class="py-5">
             <div class="row justify-content-start">
@@ -5015,7 +5040,7 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
     </div>
 </section>
 
-<section class="full-page-section p-5">
+<section class="full-page-section p-5 fade-in">
     <div class="container-fluid">
         <div class="row gx-0 align-items-center">
             <div class="col-md-6">
@@ -5023,8 +5048,7 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
 
                 <!-- <div class="ps-5"> -->
                 <div>
-                    <div style="background: hsla(0, 0%, 100%, 0.55);
-                    backdrop-filter: blur(30px);" class="card rounded-7 me-lg-n5 z-1 neumorphic neumorphic-hover">
+                    <div class="card rounded-7 me-lg-n5 z-1 neumorphic neumorphic-hover glass">
                         <div class=" card-body p-lg-5 shadow-5 overflow-scroll" style="max-height: 60vh;">
                             <form action="https://formspree.io/f/mjvnrdkw" method="POST">
                                 <!-- Name input -->
@@ -5068,10 +5092,10 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
                         <div class='row py-3'>
                             <div class="col-2" id="linkedin"><a href="https://www.linkedin.com/in/septianrazi/"><img
                                         src="assets/images/logosIcons/linkedin.png" class="w-100"
-                                        style="max-width: 40px;"></a></div>
+                                        style="max-width: 40px;" loading="lazy"></a></div>
                             <div class="col-2" id="github"><a href="https://www.github.com/septianrazi/"><img
                                         src="assets/images/logosIcons/github.png" class="w-100"
-                                        style="max-width: 40px;"></a></div>
+                                        style="max-width: 40px;" loading="lazy"></a></div>
                             <div class="col-2" id="email"><a
                                     href="mailto:septian.razi@gmail.com?subject=Found%20your%20Website!%20"><img
                                         src="assets/images/logosIcons/email.png" class="w-100"
@@ -5101,11 +5125,11 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
                 <div class="pt-5 pe-5">
                     <div class=" ms-n5 z-3">
                         <img src="assets\images\razi_selfie_hololens.jpg" alt="razi_selfie_hololens"
-                            class="rounded-xl  object-fit-cover w-100 z-3" style="rotate: 15deg">
+                            class="rounded-xl  object-fit-cover w-100 z-3" style="rotate: 15deg" loading="lazy">
                     </div>
                     <div class=" ms-n5 z-2">
                         <img src="assets\images\parliament.jpg" alt="parliament building canberra, australia"
-                            class="rounded-xl object-fit-cover w-100 z-2 mt-n5" style="rotate: 5deg">
+                            class="rounded-xl object-fit-cover w-100 z-2 mt-n5" style="rotate: 5deg" loading="lazy">
                     </div>
                 </div>
 
@@ -5143,9 +5167,7 @@ Developed a Testing Environment using React alongside a basic UI Prototype for a
 
 
 	<!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
