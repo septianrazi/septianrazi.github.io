@@ -41,3 +41,4 @@ gem 'jekyll-seo-tag'
 
 #Sitemap Generator
 gem 'jekyll-sitemap'
+gem "webrick"

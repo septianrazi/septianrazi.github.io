@@ -1,0 +1,30 @@
+---
+layout: default
+no_hero: true
+---
+<section class="blog-section">
+  <div class="glass-panel" style="width:100%; max-width: 1100px; margin: 0 auto;">
+    <div class="sec-label reveal"><div class="sec-label-line"></div><span>Writing</span></div>
+    <h1 class="sec-title reveal" style="font-size: clamp(48px, 6vw, 82px);">ALL<br>THOUGHTS &amp;<br><span class="ghost">INSIGHTS</span></h1>
+    
+    <div class="blog-grid" id="blog-grid" style="margin-top: 48px;">
+      {% assign all_posts = site.blog | sort: 'date' | reverse %}
+      {% for b in all_posts %}
+      <div class="blog-card" onclick="window.location.href='{{ b.url | relative_url }}'">
+        {% if b.image %}
+        <img src="{{ b.image | relative_url }}" class="blog-thumb" alt="{{ b.title }}">
+        {% endif %}
+        <div class="blog-card-body">
+          <div class="blog-cat">{{ b.cat | default: "Writing" }}</div>
+          <div class="blog-title">{{ b.title }}</div>
+          <div class="blog-excerpt">{{ b.excerpt }}</div>
+          <div class="blog-foot">
+            <span class="blog-date">{{ b.date | date: "%B %Y" }}</span>
+            <span class="blog-more">Read <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+.highlight {
+  background: #0d1117;
+  color: #b99700;
+  padding: 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9em;
+
+}
+
+.highlight {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+/* comments */
+.highlight .c,
+.highlight .cm,
+.highlight .c1 {
+  color: #6a737d;
+  font-style: italic;
+}
+
+/* keywords */
+.highlight .k {
+  color: #ff3b3b; 
+}
+
+
+/* strings */
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+  color: #7dd3fc; 
+}
+/* numbers */
+.highlight .m {
+  color: #c084fc; 
+}
+/* functions / names */
+.highlight .n,
+.highlight .nf {
+  color: #d3d3d3;
+}

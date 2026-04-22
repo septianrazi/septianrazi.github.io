@@ -1,480 +1,250 @@
 ---
 layout: default
 ---
-<section class="full-page-section mx-0 px-0 fade-in">
-    <div class="container-fluid  mx-0 px-0">
-        <div class="row gx-0">
-            <div class="col-md-7 vh-100 ">
-                <div class="ms-n5 mt-n5 pb-5 ">
-                    {% include carouselHero.html
-                    imgURL = "assets/images/Honours_Screenshot.png"
-                    z= 3
-                    %}
-                </div>
-            </div>
-            <div class="col-md-5 align-self-center px-5">
-                <h1>Hi, I'm Razi</h1>
-                <p>
-                    Software Engineer currently traveling the world pursuing an International Masters in Extended
-                    Reality. Currently based in Saint-Etienne, France.
-                </p>
 
-                <p>
-                    Open to new opportunities and collaborations.
-                </p>
-                <p>
-                    Hate websites?
-                </p>
-                <a href="assets\Razi_Septian_CV.pdf" target=_blank
-                    class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0">Get my CV</a>
-            </div>
+{% include hero.html %}
 
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee">
+    {% for i in (1..2) %}
+      {% for item in site.data.marquee %}
+      <div class="m-item">
+        <span>{{ item }}</span>
+        <div class="m-dot"></div>
+      </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="glass-panel">
+    <div class="about-inner">
+      <div class="reveal">
+        <div class="about-img-wrap">
+          <img src="{{ '/assets/images/razi_selfie_hololens.jpg' | relative_url }}" alt="Razi"
+            onerror="this.parentNode.style.background='linear-gradient(135deg,#111,#1a0505)';this.style.display='none'">
+          <div class="about-stat s1">
+            <i class="bi bi-globe2"></i>
+            <div class="stat-num" data-count="7">0</div>
+            <div class="stat-lbl">Countries 
+            <br/> educated in</div>
+          </div>
+
+          <div class="about-stat s2">
+            <i class="bi bi-mortarboard"></i>
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-lbl">Masters Degrees</div>
+          </div>
+
+          <div class="about-stat s3">
+            <i class="bi bi-code-slash"></i>
+            <div class="stat-num" data-count="10" data-plus="true">0</div>
+            <div class="stat-lbl">Years Coding</div>
+          </div>
         </div>
+      </div>
+      <div class="reveal">
+        <div class="sec-label"><div class="sec-label-line"></div><span>About</span></div>
+        <h2 class="sec-title">THE<br>HUMAN<br><span class="ghost">BEHIND</span><br>THE CODE</h2>
+      </div>
+      <div class="about-bio reveal">
+        <div class="about-bio-pane">
+          <p class="about-text">Hi, I'm <strong> Razi</strong>. 
+            
+            I'm a software engineer and researcher with a keen eye in <span class="hl">making computing feel intriguing and immersive</span>, whether that's a 3D data visualisation floating in mixed reality or uncovering the visual beauty in a dataset.</p>
+          <p class="about-text">I've worked across <strong>AR/VR/XR research</strong>, immersive analytics, Human-Computer Interaction and web development. I'm particularly drawn to problems that sit at the intersection of technology and human perception.</p>
+          <p class="about-text"><strong>Graduated with three masters degrees</strong> from universities in Finland, France and Japan focusing on Extended Reality.  Currently building things that push the boundaries of spatial computing and data visualisation.</p>
+        </div>
+        <div class="skills-label">Technical Arsenal</div>
+        <div class="skills-wrap" id="skills-grid">
+          {% for skill in site.data.skills %}
+          <div class="skill">{{ skill }}</div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="full-page-section p-5 fade-in">
-    <div class="container-fluid">
-        <h1 id="about">About Me</h1>
-        <div class="row gx-0 align-items-center py-5">
-            <div class="col-md-6">
-                <div class="ratio ratio-4x3 z-0">
-                    <img src="assets\images\cameraAway.jpg" alt="razi_selfie_hololens"
-                        class="neumorphic neumorphic-hover object-fit-cover w-100 z-0" style="rotate: 3deg" loading="lazy">
-                </div>
+<!-- WORK -->
+<section id="work">
+  <div style="width:70%;">
+    <div>
+      <div class="sec-label reveal"><div class="sec-label-line"></div><span>Experience</span></div>
+      <h2 class="sec-title reveal">ROLES &amp;<br><span class="ghost">EXPERIENCE</span></h2>
+      <div class="timeline" id="timeline">
+        
+        {% assign visible_work = site.work | where: "show", true | sort: 'year' | reverse %}
+        
+        {% for e in visible_work %}
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-item" data-id="{{ e.slug }}">
+            
+            {% if e.imgURL %}
+            <div class="tl-image">
+              <img src="{{ e.imgURL | relative_url }}" alt="{{ e.title }}">
             </div>
+            {% endif %}
 
-            <div class="col-md-6 align-self-end">
-                <div class="neumorphic glass-primary text-light ms-n5 mt-n5 glass about-me-blurb">
-                    <div class="p-5">
-                        <p>
-                            I'm a software engineer with a keen eye on user experience and immersion, but my passion
-                            really lies in one thing really;
-                            making computing easy and look nice.
-                            <!-- My medium of choice is XR and websites to accomplish this. -->
-
-                        </p>
-
-                        <p>
-                            I've had the opportunity to work in many different projects, particularly
-                            within the context of Immersive Analytics and Data visualisation, especially using new
-                            Immersive Technnologies such as AR and VR.
-                            I also have extensive experience in designing and developing websites.
-
-                            <!-- Peculiar combo, but I
-                            argue they are complementary - both focus on engagement and interaction. -->
-
-                        </p>
-
-                        <p>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="neumorphic ms-md-n4 me-n5 mt-n5 glass z-3 position-relative skills">
-                    <div class="p-5">
-                        <h4>Skills</h4>
-                        <div class="d-flex flex-row flex-wrap ">
-
-                            {% for skill in site.data.skills %}
-                            <div class="badge rounded-pill bg-gradient neumorphic neumorphic-hover p-2 me-2 mb-2">
-                                {{ skill }}
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
-<section class="full-page-section p-5 container-fluid fade-in" id="work">
-    <div class="container-fluid py-5">
-        <div class="row">
-            <h1 class="col" id="roles">Roles and Experience</h1>
-        </div>
-
-        <div class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
-
-            {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'role'" %}
-            {% for work in filtered_posts %}
-
-            {% unless work.show and work.category %}
-            {% continue %}
-            {% endunless %}
-            <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
-
-            {% assign id = work.id %}
-            {% assign title = work.title %}
-            {% assign description = work.description %}
-            {% assign imgURL = work.imgURL %}
-            {% assign year = work.year %}
-            {% assign stack = work.stack %}
-            {% assign modalImgURL = work.modalImgURL %}
-            {% assign findOutMoreURL = work.findOutMoreURL %}
-            {% assign githubURL = work.githubURL %}
-            {% assign show = work.show %}
-            {% assign content = work.content %}
-            {% assign tags = work.tags %}
-            {% assign video = work.video %}
-
-            <div class="col">
-                <!-- References the profile.html include -->
-                {% include card.html
-                id =id
-                title = title
-                description = description
-                imgURL = imgURL
-                year = year
-                stack = stack
-                modalImgURL = modalImgURL
-                findOutMoreURL = findOutMoreURL
-                githubURL = githubURL
-                show = show
-                content = content
-                video = video
-                %}
-            </div>
-
-            {% endfor %}
-
-
-
-        </div>
-        <!-- <div class=" btn bg-gradient neumorphic neumorphic-hover text-light my-3 float-end">
-            See More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i>
-        </div> -->
-
-
-    </div>
-
-</section>
-
-<section class="full-page-section p-5 container-fluid fade-in" id="projects">
-    <div class="container-fluid">
-        <div class="py-5">
-            <div class="row justify-content-start">
-                <div class="d-flex flex-column flex-md-row align-items-start justify-content-start">
-                    <h1 class="" id="projects">Projects</h1>
-                    <div class="btn-group ms-3 my-1" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                        <label
-                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
-                            for="btnradio1">Highlights</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label
-                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
-                            for="btnradio2">XR</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label
-                            class="btn btn-outline-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mx-1"
-                            for="btnradio3">WebDev</label>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="projectCards">
-                <!-- default project -->
-                <div id="projectsDefault" class="row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
-
-
-                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'project'" %}
-                    {% for work in filtered_posts %}
-
-                    {% unless work.show and work.category %}
-                    {% continue %}
-                    {% endunless %}
-                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
-
-                    {% assign id = work.id %}
-                    {% assign title = work.title %}
-                    {% assign description = work.description %}
-                    {% assign imgURL = work.imgURL %}
-                    {% assign year = work.year %}
-                    {% assign stack = work.stack %}
-                    {% assign modalImgURL = work.modalImgURL %}
-                    {% assign findOutMoreURL = work.findOutMoreURL %}
-                    {% assign githubURL = work.githubURL %}
-                    {% assign show = work.show %}
-                    {% assign content = work.content %}
-                    {% assign tags = work.tags %}
-                    {% assign video = work.video %}
-
-                    <div class="col">
-                        <!-- References the profile.html include -->
-                        {% include card.html
-                        id =id
-                        title = title
-                        description = description
-                        imgURL = imgURL
-                        year = year
-                        stack = stack
-                        modalImgURL = modalImgURL
-                        findOutMoreURL = findOutMoreURL
-                        githubURL = githubURL
-                        show = show
-                        content = content
-                        video = video
-                        %}
-                    </div>
-
-                    {% endfor %}
-
-
-
-                </div>
-
-                <!-- Web Projects -->
-                <div id="projectsWebDev" class="d-none row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
-
-
-                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'WebDev'" %}
-                    {% for work in filtered_posts %}
-
-                    {% unless work.category == 'project' %}
-                    {% continue %}
-                    {% endunless %}
-
-                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
-
-                    {% assign id = work.id %}
-                    {% assign title = work.title %}
-                    {% assign description = work.description %}
-                    {% assign imgURL = work.imgURL %}
-                    {% assign year = work.year %}
-                    {% assign stack = work.stack %}
-                    {% assign modalImgURL = work.modalImgURL %}
-                    {% assign findOutMoreURL = work.findOutMoreURL %}
-                    {% assign githubURL = work.githubURL %}
-                    {% assign show = work.show %}
-                    {% assign content = work.content %}
-                    {% assign tags = work.tags %}
-                    {% assign video = work.video %}
-
-                    <div class="col">
-                        <!-- References the profile.html include -->
-                        {% include card.html
-                        id =id
-                        title = title
-                        description = description
-                        imgURL = imgURL
-                        year = year
-                        stack = stack
-                        modalImgURL = modalImgURL
-                        findOutMoreURL = findOutMoreURL
-                        githubURL = githubURL
-                        show = show
-                        content = content
-                        video = video
-                        %}
-                    </div>
-
-                    {% endfor %}
-
-
-
-                </div>
-
-                <!-- XR Projects -->
-                <div id="projectsXR" class="d-none row row-cols-md-4 row-cols-sm-1 row-cols-1 g-5 section-cards">
-
-
-                    {% assign filtered_posts = site.posts | where_exp: "item", "item.tags contains 'XR'" %}
-                    {% for work in filtered_posts %}
-
-                    {% unless work.category == 'project' %}
-                    {% continue %}
-                    {% endunless %}
-
-                    <!-- pass variables from profile into new variables as you cannot put variables directly in includes bracketing problems -->
-
-                    {% assign id = work.id %}
-                    {% assign title = work.title %}
-                    {% assign description = work.description %}
-                    {% assign imgURL = work.imgURL %}
-                    {% assign year = work.year %}
-                    {% assign stack = work.stack %}
-                    {% assign modalImgURL = work.modalImgURL %}
-                    {% assign findOutMoreURL = work.findOutMoreURL %}
-                    {% assign githubURL = work.githubURL %}
-                    {% assign show = work.show %}
-                    {% assign content = work.content %}
-                    {% assign tags = work.tags %}
-                    {% assign video = work.video %}
-
-                    <div class="col">
-                        <!-- References the profile.html include -->
-                        {% include card.html
-                        id =id
-                        title = title
-                        description = description
-                        imgURL = imgURL
-                        year = year
-                        stack = stack
-                        modalImgURL = modalImgURL
-                        findOutMoreURL = findOutMoreURL
-                        githubURL = githubURL
-                        show = show
-                        content = content
-                        video = video
-                        %}
-                    </div>
-
-                    {% endfor %}
-
-
-
-                </div>
-            </div>
-
-
-            <script>
-                // Get references to the buttons and the parent div
-                var btnHighlights = document.querySelector('#btnradio1');
-                var btnXR = document.querySelector('#btnradio2');
-                var btnWebDev = document.querySelector('#btnradio3');
-                var parentDiv = document.querySelector('#projectCards');
-
-                // Get references to the divs
-                var divProjectsDefault = document.querySelector('#projectsDefault');
-                var divProjectsWebDev = document.querySelector('#projectsWebDev');
-                var divProjectsXR = document.querySelector('#projectsXR');
-
-                // Add click event listeners to the buttons
-                btnHighlights.addEventListener('click', function () {
-                    // Remove all child divs from the parent
-                    while (parentDiv.firstChild) {
-                        parentDiv.removeChild(parentDiv.firstChild);
-                    }
-                    // Add the corresponding div
-                    parentDiv.appendChild(divProjectsDefault);
-                    divProjectsDefault.classList.remove('d-none');
-                });
-
-                btnXR.addEventListener('click', function () {
-                    while (parentDiv.firstChild) {
-                        parentDiv.removeChild(parentDiv.firstChild);
-                    }
-                    parentDiv.appendChild(divProjectsXR);
-                    divProjectsXR.classList.remove('d-none');
-                });
-
-                btnWebDev.addEventListener('click', function () {
-                    while (parentDiv.firstChild) {
-                        parentDiv.removeChild(parentDiv.firstChild);
-                    }
-                    parentDiv.appendChild(divProjectsWebDev);
-                    divProjectsWebDev.classList.remove('d-none');
-                });
-            </script>
-            <!-- <div class=" btn bg-gradient neumorphic neumorphic-hover text-light my-3 float-end">
-                See More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i>
+            <div class="tl-content">
+              <div class="tl-meta">
+                <span class="tl-period">{{ e.year }}</span>
+                <!-- <span class="tl-badge">{{ e.category }}</span> -->
+              </div>
+              
+              <div class="tl-role" style="font-weight: bold; font-size: 1.2rem;">{{ e.title }}</div>
+              <div class="tl-org">{{ e.description }}</div>
+              
+                    <!-- <div class="tl-tags">
+              {% assign tags_list = e.stack | split: ", " %}
+              {% for t in tags_list %}
+              <span class="tag">{{ t }}</span>
+              {% endfor %}
             </div> -->
+              </div>
+            
+          </div>
         </div>
-
+        {% endfor %}
+        
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="full-page-section p-5 fade-in">
-    <div class="container-fluid">
-        <div class="row gx-0 align-items-center">
-            <div class="col-md-6">
-                <h1 id="contact">Contact</h1>
+<!-- PROJECTS -->
+<section id="projects">
+  <div style="width:70%;">
+    <div class="sec-label reveal"><div class="sec-label-line"></div><span>Selected Work</span></div>
+    <h2 class="sec-title reveal">PROJECTS &amp;<br><span class="ghost">EXPERIMENTS</span></h2>
+    <div class="proj-filters reveal" id="proj-filters">
+      <button class="f-btn active" data-filter="All">Highlights</button>
+      <button class="f-btn" data-filter="XR">XR</button>
+      <button class="f-btn" data-filter="DATAVIS">DATAVIS</button>
+      <button class="f-btn" data-filter="RESEARCH">RESEARCH</button>
+      <button class="f-btn" data-filter="SoftEng">SoftEng</button>
+      <button class="f-btn" data-filter="WebDev">WebDev</button>
 
-                <!-- <div class="ps-5"> -->
-                <div>
-                    <div class="card rounded-7 me-lg-n5 z-1 neumorphic neumorphic-hover glass">
-                        <div class=" card-body p-lg-5 shadow-5 overflow-scroll" style="max-height: 60vh;">
-                            <form action="https://formspree.io/f/mjvnrdkw" method="POST">
-                                <!-- Name input -->
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="form4Example1" class="form-control" name="name" required />
-                                    <label class="form-label" for="form4Example1">Name</label>
-                                </div>
-
-                                <!-- Email input -->
-                                <div class="form-outline mb-3">
-                                    <input type="email" id="form4Example2" class="form-control" name="email" required />
-                                    <label class="form-label" for="form4Example2">Email address</label>
-                                </div>
-
-                                <!-- Message input -->
-                                <div class="form-outline mb-3">
-                                    <textarea class="form-control" id="form4Example3" rows="3" name="message"
-                                        required></textarea>
-                                    <label class="form-label" for="form4Example3">Message</label>
-                                </div>
-
-                                <!-- Checkbox -->
-                                <div class="form-check d-flex justify-content-center mb-3">
-                                    <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4"
-                                        checked name="sendCopy" />
-                                    <label class="form-check-label" for="form4Example4">
-                                        Send me a copy of this message
-                                    </label>
-                                </div>
-
-                                <!-- Submit button -->
-                                <button type="submit"
-                                    class="btn btn-primary rounded-pill neumorphic neumorphic-hover bg-gradient border-0 mb-4">Send</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row py-3">
-                        <h3>
-                            Or stalk me here
-                        </h3>
-                        <div class='row py-3'>
-                            <div class="col-2" id="linkedin"><a href="https://www.linkedin.com/in/septianrazi/"><img
-                                        src="assets/images/logosIcons/linkedin.png" class="w-100"
-                                        style="max-width: 40px;" loading="lazy"></a></div>
-                            <div class="col-2" id="github"><a href="https://www.github.com/septianrazi/"><img
-                                        src="assets/images/logosIcons/github.png" class="w-100"
-                                        style="max-width: 40px;" loading="lazy"></a></div>
-                            <div class="col-2" id="email"><a
-                                    href="mailto:septian.razi@gmail.com?subject=Found%20your%20Website!%20"><img
-                                        src="assets/images/logosIcons/email.png" class="w-100"
-                                        style="max-width: 40px;"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="col-md-5 d-none d-md-block">
-
-                <div class="ratio ratio-1x1 z-0">
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89586.2401607847!2d4.336766499448023!3d45.43816864753188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5abff0dcfe415%3A0x631b2db87635756!2sSaint-%C3%89tienne%2C%20France!5e0!3m2!1sen!2sfi!4v1709330184990!5m2!1sen!2sfi"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        class="neumorphic neumorphic-hover"></iframe>
-
-                </div>
-            </div>
-
-            <div class="col-md-1 align-self-start d-none d-md-block ">
-                <div class="pt-5 pe-5">
-                    <div class=" ms-n5 z-3">
-                        <img src="assets\images\razi_selfie_hololens.jpg" alt="razi_selfie_hololens"
-                            class="rounded-xl  object-fit-cover w-100 z-3" style="rotate: 15deg" loading="lazy">
-                    </div>
-                    <div class=" ms-n5 z-2">
-                        <img src="assets\images\parliament.jpg" alt="parliament building canberra, australia"
-                            class="rounded-xl object-fit-cover w-100 z-2 mt-n5" style="rotate: 5deg" loading="lazy">
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
     </div>
+    <div class="bento" id="bento">
+      {% comment %} Filter by 'show' flag and sort by year descending {% endcomment %}
+      {% assign all_projects = site.projects | sort: 'year' | reverse %}
+
+      {% for p in all_projects %}
+        {% comment %} 
+          Mapping p.size to a default if not present, 
+          Mapping p.cat to the 'category' key from your data 
+        {% endcomment %}
+        <div class="proj-card s4" data-id="{{ p.slug }}" data-cat="{{ p.category }} {{ p.tags | join: ' ' }}" data-show="{{ p.show | default: false }}" {% if p.show != true %}style="display: none;"{% endif %}>
+          
+          {% comment %} Changed p.img to p.imgURL {% endcomment %}
+          {% if p.imgURL and p.imgURL != "" %}
+            <img class="proj-thumb" src="{{ p.imgURL | relative_url }}" alt="{{ p.title }}" loading="lazy">
+          {% else %}
+            <div class="proj-thumb-div"></div>
+          {% endif %}
+
+          <div class="proj-open"><i class="bi bi-plus-lg"></i></div>
+          
+          <div class="proj-body">
+            {% comment %} Changed p.cat to p.category {% endcomment %}
+            <div class="proj-yr">{{ p.year }}</div>
+            <div class="proj-title">{{ p.title }}</div>
+            
+            {% comment %} Changed p.sub to p.description {% endcomment %}
+            <div class="proj-sub">{{ p.description }}</div>
+            
+            <div class="proj-chips">
+              {% comment %} 
+                Updated split logic: Your data uses commas (C#, Unity, ...) 
+                instead of the old &middot; separator.
+              {% endcomment %}
+              {% assign stack_arr = p.stack | split: ", " %}
+              {% for chip in stack_arr limit:3 %}
+                <span class="chip">{{ chip | strip | escape }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="glass-panel">
+    <div style="max-width:1100px">
+      <div class="sec-label reveal"><div class="sec-label-line"></div><span>Writing</span></div>
+      <h2 class="sec-title reveal">THOUGHTS &amp;<br><span class="ghost">INSIGHTS</span></h2>
+      <div class="blog-grid-wrap">
+        <div class="blog-grid" id="blog-grid">
+          {% assign latest_posts = site.blog | sort: 'date' | reverse %}
+          {% for b in latest_posts limit:3 %}
+          <div class="blog-card" onclick="window.location.href='{{ b.url | relative_url }}'">
+            {% if b.image %}
+            <img src="{{ b.image | relative_url }}" class="blog-thumb" alt="{{ b.title }}">
+            {% endif %}
+            <div class="blog-card-body">
+              <div class="blog-cat">{{ b.cat }}</div>
+              <div class="blog-title">{{ b.title }}</div>
+              <div class="blog-excerpt">{{ b.excerpt }}</div>
+              <div class="blog-foot">
+                <span class="blog-date">{{ b.date | date: "%b %d, %Y" }}</span>
+                <span class="blog-more">Read <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="btn-side-wrap reveal">
+          <a href="{{ '/blog' | relative_url }}" class="btn-side-column">
+            <div class="btn-red-circle"><i class="bi bi-arrow-right"></i></div>
+            <span class="btn-side-label">View More</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="glass-panel">
+    <div class="contact-inner">
+      <div>
+        <div class="sec-label reveal"><div class="sec-label-line"></div><span>Contact</span></div>
+        <h2 class="sec-title reveal">LET'S<br>BUILD<br><span class="ghost">SOMETHING</span></h2>
+        <p class="about-text reveal" style="margin-top:12px">Open to opportunities, collaborations, and interesting conversations. XR projects, web applications, research; I'd love to hear from you.</p>
+        <div class="c-links reveal" id="c-links">
+          {% for link in site.data.contact %}
+          <a class="c-link" href="{{ link.href }}" {% if link.href contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <div class="c-link-icon"><i class="bi {{ link.icon }}"></i></div>
+            <div>
+              <div class="c-link-lbl">{{ link.lbl }}</div>
+              <div class="c-link-val">{{ link.val }}</div>
+            </div>
+            <i class="bi bi-arrow-right c-link-arr"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="c-form" action="https://formspree.io/f/mjvnrdkw" method="POST">
+          <input type="text" name="_gotcha" style="display:none" />
+          <div><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div><label>Message</label><textarea name="message" placeholder="Tell me what you're working on..." required></textarea></div>
+          <button type="submit" class="btn-red" style="width:100%;justify-content:center">
+            <i class="bi bi-send"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

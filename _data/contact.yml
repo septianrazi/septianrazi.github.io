@@ -1,0 +1,19 @@
+- icon: "bi-envelope"
+  lbl: "Email"
+  val: "septian.razi@gmail.com"
+  href: "mailto:septian.razi@gmail.com"
+
+- icon: "bi-linkedin"
+  lbl: "LinkedIn"
+  val: "septianrazi"
+  href: "https://linkedin.com/in/septianrazi/"
+
+- icon: "bi-file-earmark-pdf"
+  lbl: "CV"
+  val: "Download PDF"
+  href: "assets/Razi_Septian_CV.pdf"
+
+- icon: "bi-github"
+  lbl: "GitHub"
+  val: "septianrazi"
+  href: "https://github.com/septianrazi/"
