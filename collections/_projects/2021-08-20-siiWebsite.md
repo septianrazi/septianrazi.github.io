@@ -4,7 +4,7 @@ description: ANU Software Innovation Institute
 id: siiWebsite
 imgURL: assets/images/siiWebsite.png
 modalImgURL: assets/images/DemoGifs/siiWebsite.gif
-year: 2021
+year: "2021"
 findOutMoreURL: https://sii.anu.edu.au/
 show: true
 tags: project WebDev

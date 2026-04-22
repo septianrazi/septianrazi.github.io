@@ -3,7 +3,7 @@ title: Naruto in Mixed Reality
 description: Personal Project
 id: naruto
 imgURL: assets/images/naruto-in-mr.png
-year: 2020
+year: "2020"
 
 modalImgURL: assets/images/DemoGifs/ExampleChidori.gif
 githubURL: https://github.com/septianrazi/Naruto-In-Mixed-Reality

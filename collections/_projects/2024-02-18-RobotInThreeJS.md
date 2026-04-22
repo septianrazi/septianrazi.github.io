@@ -3,7 +3,7 @@ title: Spot Robot in ThreeJS
 description: IMLEX and Universite Jean Monnet
 id: robotInThreeJS
 imgURL: assets/images/spot.jpg
-year: 2024
+year: "2024"
 
 modalImgURL: assets/images/spot.png
 githubURL: https://github.com/septianrazi/RobotInThree.JS

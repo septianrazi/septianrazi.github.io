@@ -3,7 +3,7 @@ title: Distributed XR Graph Visualisations
 description: ANU & CSIRO's Data61
 id: XRGraphDistribution
 imgURL: assets/images/DistributedXRGraphs.jpg
-year: 2021
+year: "2021"
 
 stack: C#, Unity, Mixed Reality Toolkit, Python, Mathematica, Jupyter Notebook, Firebase, Mendeley, LaTex, Git
 video: Z7vJ7QcyWZU

@@ -3,7 +3,7 @@ title: Fenner Social Media Data Analytics
 description: Fenner Hall Symposium, ANU
 id: fennerSymposium2020
 imgURL: assets\images\Emoji_Fenner_Symposium.png
-year: 2020
+year: "2020"
 
 stack: Python, Selenium, Jupyter Notebook, Pandas
 sourceURL: https://github.com/septianrazi/Scraper

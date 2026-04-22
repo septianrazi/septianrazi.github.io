@@ -3,7 +3,7 @@ title: Video Colour Vis in ThreeJS
 description: IMLEX and Universite Jean Monnet
 id: vidColourVis
 imgURL: assets/images/colourdensity.png
-year: 2024
+year: "2024"
 
 video: LgWNhpFQBWk
 githubURL: https://github.com/septianrazi/ColourDensityVisInThreeJS

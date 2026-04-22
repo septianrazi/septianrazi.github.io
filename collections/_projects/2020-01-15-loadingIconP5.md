@@ -3,7 +3,7 @@ title: Loading-Icons.p5
 description: Personal Project
 id: loadingIconP5
 imgURL: assets/images/loadingIcon.png
-year: 2019
+year: "2019"
 
 stack: JavaScript, p5.js
 modalImgURL: assets/images/DemoGifs/loadingIcon.gif

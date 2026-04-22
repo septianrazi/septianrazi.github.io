@@ -3,7 +3,7 @@ title: Rotational Feedback Manipulation in VR
 description: Toyohashi University of Technology
 id: sensoryTwist
 imgURL: assets/images/sensoryTwist.png
-year: 2025
+year: "2025"
 
 stack: C#, Unity, Mixed Reality Toolkit, R
 modalImgUrl: assets/images/sensoryTwist.png

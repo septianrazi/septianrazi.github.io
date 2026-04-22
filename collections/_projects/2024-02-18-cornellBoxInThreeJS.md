@@ -3,7 +3,7 @@ title: Cornell Box in ThreeJS
 description: IMLEX and Universite Jean Monnet
 id: cornellBoxInThreeJS
 imgURL: assets/images/cornellBox.png
-year: 2024
+year: "2024"
 
 modalImgURL: assets/images/cornellBox.png
 githubURL: https://github.com/septianrazi/CornellBoxInThreeJS

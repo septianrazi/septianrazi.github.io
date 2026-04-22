@@ -3,7 +3,7 @@ title: Best Solution for Limited Resources
 description: ANU Innovation Challenge
 id: anuInnovationChallenge
 imgURL: assets/images/anuInnovationChallenge.jpg
-year: 2018
+year: "2018"
 
 sourceURL: https://www.facebook.com/pg/InnovationChallengeANU/photos/?tab=album&album_id=2156893164541540&ref=page_internal
 findOutMoreURL: www.google.com

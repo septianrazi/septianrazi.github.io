@@ -3,7 +3,7 @@ title: Mixed Reality for Football Spectators
 description: IMLEX and YLE
 id: mastersThesis
 imgURL: assets/images/MRPrototypeScreenshotNew.png
-year: 2025
+year: "2025"
 
 stack: C#, Unity, Mixed Reality Toolkit, Next.js, Python
 video: -FOC2TPoM8k

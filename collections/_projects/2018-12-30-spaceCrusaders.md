@@ -3,7 +3,7 @@ title: Space Crusaders Android Game
 description: ANU
 id: spaceCrusaders
 imgURL: assets/images/spaceCrusaders.png
-year: 2018
+year: "2018"
 
 stack: Java, Android Studio, Git
 sourceURL: https://github.com/septianrazi/SpaceCrusaders

@@ -3,7 +3,7 @@ title: Project Manager
 description: UI Prototype with Accenture & ANU Techlauncher
 id: accenture
 imgURL: assets/images/logosIcons/accenture.png
-year: 2019
+year: "2019"
 findOutMoreURL: www.google.com
 githubURL: github.come
 show: true
