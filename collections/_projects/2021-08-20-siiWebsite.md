@@ -12,8 +12,6 @@ category: project
 stack: HTML, CSS, JavaScript, Jekyll
 ---
 
-**Web Architecture · Maintainability · Static Sites**
-
 Refactored and stabilised a legacy website by migrating it from a fragmented WordPress/HTML codebase to a maintainable static site architecture.
 
 - Identified issues with a **degraded WordPress-to-HTML migration**, where tightly coupled JavaScript and plugin remnants made updates difficult

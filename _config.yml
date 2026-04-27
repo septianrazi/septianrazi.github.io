@@ -21,10 +21,7 @@
 title: Septian Razi
 email: raziseptian@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal website! Feel free to look at all the stuff I've done on this website. 
-  You can also find my more traditional CV on the top menu.
-
-  - Razi
+  Personal Portfolio Website of Septian Razi.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://septianrazi.github.io" # the base hostname & protocol for your site
 twitter_username: septianrazi

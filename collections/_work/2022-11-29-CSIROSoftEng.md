@@ -13,8 +13,6 @@ category: role
 stack: C#, Unity, Microsoft Mixed Reality Toolkit, Git, Confluence, User Studies
 ---
 
-**XR Systems · Immersive Analytics · Applied Research**
-
 Developed and evaluated Extended Reality (XR) systems across safety-critical training, immersive analytics, and applied research projects, working at the intersection of software engineering and human-computer interaction.
 
 - Built features for a large-scale VR safety training system, designing interaction flows and UI for simulating hazardous industrial scenarios used by hundreds of trainees

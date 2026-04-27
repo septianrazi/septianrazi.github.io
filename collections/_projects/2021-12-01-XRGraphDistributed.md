@@ -14,8 +14,6 @@ tags: project SoftEng XR DATAVIS Research
 category: project
 ---
 
-**XR Systems · Data Pipelines · Cloud Integration**
-
 Built a system for **live transfer of graph data** from desktop analytics environments (Python/Mathematica) into immersive XR applications.
 
 - Developed a **cloud-based pipeline** enabling real-time synchronisation of 3D graph data between desktop notebooks and a Unity XR client

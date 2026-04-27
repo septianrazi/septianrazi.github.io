@@ -13,8 +13,6 @@ category: role
 stack: JavaScript, p5.js, VSCode, C#, Unity
 ---
 
-**Teaching · Game Development · Inclusive Learning**
-
 Taught and mentored a weekly class of students with diverse learning needs, including those on the autism spectrum, introducing programming through game development.
 
 - Designed and delivered **structured coding lessons** using game development (Unity, p5.js) to build engagement and progressively develop technical skills

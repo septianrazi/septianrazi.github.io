@@ -15,8 +15,6 @@ modalImgURL: assets/images/DemoGifs/accentureUIPrototype.gif
 sourceURL: work.html
 ---
 
-**Project Management · Agile Delivery · HCI Prototyping**
-
 Led the end-to-end delivery of a UI prototype for safety-critical vehicle environments, focusing on usability under fatigue and high cognitive load.
 
 - Managed a **cross-functional team of 7**, coordinating research, design, and development across an Agile workflow

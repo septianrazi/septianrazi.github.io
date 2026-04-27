@@ -14,8 +14,6 @@ category: project
 stack: three.js, html, webxr
 ---
 
-**Computer Graphics · Interactive Simulation · WebXR**
-
 Developed an articulated 3D simulation of a quadruped robot in Three.js, modelling joint constraints and movement behaviours inspired by real-world robotics systems.
 
 - Recreated a **quadruped robot (inspired by Spot)** using Three.js primitives, focusing on structural and kinematic accuracy

@@ -1,26 +1,8 @@
 /* =============================================================
    HERO.JS  ·  Razi Portfolio — 3D Graph Scene
-   ─────────────────────────────────────────────────────────────
-   Changes in this version
-   ──────────────────────────────────────────────────────────────
-   · New node layout: work=far right, projects=bottom-left,
-     blog=top-left, about+contact above hero, contact=far left-back
-   · Camera offset: each section cam is shifted left so the node
-     sits on the right half of the screen
-   · Live-tracking edges: rebuilt every frame from current child
-     world-positions (no more stale static geometry)
-   · Focus colour system: unfocused nodes/children lerp to a
-     desaturated grey-red; focused section stays full red
-   · Dynamic scroll mapping: section focus derived from DOM
-     section offsetTop positions, not fixed scrollFrac math
-   · Projects → double-row arc layout (organic, scalable)
-   · Blog → spiral layout (scales to any number of posts)
-   · Performance: child rings removed; section sphere segments
-     reduced; particles reduced; per-frame allocs minimised
-   · setTheme('light'|'dark') public API kept
 ================================================================= */
 
-/* ── Expected globals (define in your HTML before this file) ──
+/* ── Expected globals 
    SKILLS      string[]
    EXPERIENCE  any[]
    PROJECTS    any[]

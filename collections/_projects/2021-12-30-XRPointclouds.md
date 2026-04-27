@@ -14,8 +14,6 @@ tags: project SoftEng XR DATAVIS Research
 category: project
 ---
 
-**HoloLens · 3D Data · XR Interaction**
-
 Developed an XR system for visualising and interacting with large-scale point cloud data on HoloLens 2.
 
 - Built support for **.ply point cloud files** in Unity, enabling accurate rendering of complex 3D datasets in XR

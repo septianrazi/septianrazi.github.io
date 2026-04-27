@@ -14,8 +14,6 @@ tags: project SoftEng Research
 category: project
 ---
 
-**Data Collection · Analysis · Social Insights**
-
 Developed a web scraping pipeline to analyse engagement patterns within a residential community’s Facebook group.
 
 - Built a **Selenium-based scraper** to collect post data over time, including text, likes, comments, and metadata
